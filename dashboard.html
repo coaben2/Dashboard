@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="Accueil.html" id="accueil-link">Accueil</a></li>
+        <li><a href="dashboard.html" id="dashboard-link">Dashboard</a></li>
+        <li><a href="blog.html" id="blog-link">blog</a></li>
+        <li><a href="portfolio.html" id="portfolio-link">Portofolio</a></li>
+        <!-- Ajoutez d'autres éléments du menu ici si nécessaire -->
+      </ul>
+    </nav>
+  </header>
+
+<div id="stats-container">
+  <div class="stat">
+    <h2>total de membres</h2>
+    <p id="total-members">0</p>
+  </div>
+  <div class="stat">
+    <h2>en ligne</h2>
+    <p id="online-members">0</p>
+  </div>
+  <div class="stat">
+    <h2>hors ligne</h2>
+    <p id="offline-members">0</p>
+  </div>
+  <div class="stat">
+    <h2>absents</h2>
+    <p id="idle-members">0</p>
+  </div>
+</div>  
+
+  <script>
+    // JavaScript côté client pour mettre à jour les statistiques
+    // depuis les données récupérées du serveur Discord
+    function updateStats(stats) {
+      document.getElementById('total-members').innerText = stats.totalMembers;
+      document.getElementById('online-members').innerText = stats.onlineMembers;
+      document.getElementById('offline-members').innerText = stats.offlineMembers;
+      document.getElementById('idle-members').innerText = stats.idleMembers;
+    }
+
+    // Code pour récupérer les données depuis le serveur (API)
+    // et appeler la fonction updateStats() pour les afficher
+    fetch('/api/stats')
+      .then(response => response.json())
+      .then(stats => updateStats(stats))
+      .catch(err => console.error(err));
+  </script>
+  <script>
+    function updateStats(stats) {
+      // Mettez à jour les statistiques sur le dashboard
+    }
+  
+    function fetchStats() {
+      fetch('/api/stats')
+        .then(response => response.json())
+        .then(stats => updateStats(stats))
+        .catch(err => console.error(err));
+    }
+  
+    // Mettez à jour les statistiques toutes les 5 secondes (5000 ms)
+    setInterval(fetchStats, 5000);
+  </script>
+  <footer>
+    <ul>
+   <li><a href="https://www.youtube.com/@coaben" target="_blank"><img src="social\youtube.png" alt="YouTube"></a></li>
+   <li><a href="https://www.instagram.com/coaben2" target="_blank"><img src="social\instagram.png" alt="Instagram"></a></li>
+   <li><a href="https://www.twitch.tv/coaben" target="_blank"><img src="social\tic.png" alt="Twitch"></a></li>
+   <li><a href="https://coaben.blogspot.com/" target="_blank"><img src="social\blogger.png" alt="WordPress"></a></li>
+ </ul>
+</footer>
+</body>
+</html>
+

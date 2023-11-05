@@ -1,0 +1,204 @@
+/* style.css */
+
+/* Réinitialisation des marges et des rembourrages */
+body, h1, h2, p, div, ul, li, a ,header,footer{
+    margin: 0;
+    padding: 0;
+  }
+  
+/* Styles pour le header */
+header {
+  background-color: #333; /* Couleur de fond du header (à personnaliser) */
+  color: rgb(0, 0, 0); /* Couleur du texte du header (à personnaliser) */
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+}
+header h1 {
+  color: #d2691e
+}
+nav a {
+  color: #ff0000;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: #00FF00
+}
+/* Styles pour le footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  margin-top: 20px;
+}
+.footer-icons img {
+  height: 30px;
+  margin-right: 10px; /* Ajoutez une marge droite pour espacer les icônes */
+}
+footer ul {
+  list-style: none;
+  display: flex; /* Utiliser flexbox pour aligner les icônes horizontalement */
+}
+footer li {
+  margin-right: 10px;
+}
+main {
+  margin-top: 100px; /* Pour décaler le contenu sous le header */
+  margin-bottom: 100px;
+  padding: 20px;
+}
+/* Styles pour le menu */
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  margin-right: 10px;
+}
+/* Styles pour le dashboard */
+#dashboard-section {
+  display: none; /* Masquer le dashboard par défaut */
+  padding: 20px;
+  width: 100%
+}
+ /* Centrer le contenu */
+ body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#stats-container {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 25%;
+  padding: 10px;
+  text-align: center;
+  border-right: 1px solid #ccc;
+  flex: 1;
+}
+
+.stat h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 8px;
+}
+.stat:last-child {
+  border-right: none; /* Pour supprimer la bordure droite du dernier élément */
+}
+
+.stat p {
+  font-size: 24px;
+  color: #007bff;
+  margin: 0;
+}
+  
+  /* Ajoutez d'autres styles selon vos préférences */
+  
+.texte-personnalise {
+  margin-top: 120px
+  /* Ajoutez d'autres styles personnalisés si nécessaire */
+}  
+/* Styles pour la fenêtre modale */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 800px;
+  position: relative;
+}
+
+.close {
+  position: static;
+  top: 0;
+  right: 0;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+#portfolio {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio-entry {
+  width: 200px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+#overlay {
+  width: 300px;
+  height: 300px;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styles pour l'affichage en taille réelle */
+#imageContainer {
+  position: relative;
+}
+
+#fullImage {
+  max-width: 300px;
+  max-height: 300px;
+}
+
+#closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
