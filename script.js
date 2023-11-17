@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
   
     // Fonction pour charger le contenu d'une histoire
     function loadStory(title) {
-      fetch(`txt/${title}.html`)
+      fetch(`assets/txt/${title}.html`)
         .then(response => response.text())
         .then(content => {
           blogContent.innerHTML = content;
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
   
     // Fonction pour obtenir la liste des titres depuis le serveur
     function getTitles() {
-      fetch('/titles')
+      fetch('assets/titles')
         .then(response => response.json())
         .then(titles => {
           titles.forEach(title => {
