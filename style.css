@@ -8,14 +8,15 @@ body, h1, h2, p, div, ul, li, a ,header,footer{
   
 /* Styles pour le header */
 header {
-  background-color: #333; /* Couleur de fond du header (à personnaliser) */
-  color: rgb(0, 0, 0); /* Couleur du texte du header (à personnaliser) */
-  text-align: center;
   position: fixed;
+  background-color: #333;
+  color: rgb(0, 0, 0); 
+  text-align: center;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100px;
+  height: 50px;
+  z-index: 2;
 }
 header h1 {
   color: #d2691e
@@ -31,28 +32,33 @@ nav a:hover {
 }
 /* Styles pour le footer */
 footer {
-  position: fixed;
+  background-color: #333; 
+  color: rgb(0, 0, 0);
+  position: fixed; 
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 100px;
-  margin-top: 20px;
+  height: 60px;
+  margin-top: 2px;
+  z-index: 2;
 }
 .footer-icons img {
   height: 30px;
-  margin-right: 10px; /* Ajoutez une marge droite pour espacer les icônes */
+  margin-right: 10px;
 }
 footer ul {
   list-style: none;
-  display: flex; /* Utiliser flexbox pour aligner les icônes horizontalement */
+  display: flex;
 }
 footer li {
   margin-right: 10px;
 }
 main {
-  margin-top: 100px; /* Pour décaler le contenu sous le header */
-  margin-bottom: 100px;
-  padding: 20px;
+  margin-top: 80px;
+  margin-bottom: 32px; 
+  padding: 10px;
+  overflow-y: auto;
+  max-height: calc(100vh - 112px);
 }
 /* Styles pour le menu */
 nav ul {
@@ -201,4 +207,51 @@ h1 {
   font-size: 24px;
   color: #fff;
   cursor: pointer;
+}
+#blog-content {
+  height: 1000px;
+  overflow-y: auto;
+  width: 100%;
+  margin: 0 auto;
+}
+pre {
+  font-family: 'arial', monospace;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333; /* Couleur du texte */
+  background-color: #f8f8f8; /* Couleur de fond */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+#sidebar {
+  width: 100px; /* Largeur initiale de la colonne gauche */
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #333; /* Couleur de fond de la colonne gauche */
+  overflow-y: auto;
+  padding-top: 20px;
+  color: white; /* Couleur du texte */
+  transition: width 0.5s ease; /* Transition pour une animation fluide */
+}
+
+.titles-container {
+  padding: 10px;
+}
+
+.titles-container button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background-color: transparent;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.titles-container button:hover {
+  text-decoration: underline;
 }

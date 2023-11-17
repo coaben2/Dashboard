@@ -43,3 +43,27 @@ app.get('/api/stats', (req, res) => {
   const stats = getStats();
   res.json(stats);
 });
+
+const path = require('path');
+const fs = require('fs');
+
+const txtDir = path.join(__dirname, 'txt');
+
+app.get('/titles', (req, res) => {
+  fs.readdir(txtDir, (err, files) => {
+    if (err) {
+      console.error(err);
+      res.status(500).send('Erreur lors de la lecture des fichiers.');
+    } else {
+      const htmlFiles = files.filter(file => path.extname(file) === '.html');
+      res.json(htmlFiles.map(file => path.basename(file, '.html')));
+    }
+  });
+});
+
+app.use(express.static('public')); // Permet de servir d'autres fichiers statiques comme vos fichiers HTML
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Serveur en cours d'exécution sur le port ${PORT}`);
+});

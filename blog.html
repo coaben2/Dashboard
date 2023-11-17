@@ -1,65 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-  <title>Mon Blog</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-
 <body>
   <!-- Header -->
   <header>
     <nav>
       <ul>
         <li><a href="Accueil.html" id="accueil-link">Accueil</a></li>
-        <li><a href="dashboard.html" id="dashboard-link">Dashboard</a></li>
         <li><a href="blog.html" id="blog-link">blog</a></li>
         <li><a href="portfolio.html" id="portfolio-link">Portofolio</a></li>
-        <!-- Ajoutez d'autres éléments du menu ici si nécessaire -->
       </ul>
     </nav>
   </header>
-  <!-- Contenu de la page du blog -->
-  <main>
-    <div id="blog-content" class="texte-personnalise" style="max-height: 900px; overflow-y: auto; width: 100%;"></div>
-  </main>
-  <!-- Liste des fichiers texte -->
-  <div id="file-list"></div>
 
-  <!-- Fenêtre modale pour afficher le contenu -->
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <div id="modal-content"></div>
+  <aside id="sidebar">
+    <div class="titles-container"><button onclick="toggleSidebar()">Toggle Sidebar</button>
     </div>
-  </div>
+  </aside>
+
+<main id="blog-content" class="texte-personnalise"></main>
 
   <footer>
     <ul>
-   <li><a href="https://www.youtube.com/@coaben" target="_blank"><img src="social\youtube.png" alt="YouTube"></a></li>
-   <li><a href="https://www.instagram.com/coaben2" target="_blank"><img src="social\instagram.png" alt="Instagram"></a></li>
-   <li><a href="https://www.twitch.tv/coaben" target="_blank"><img src="social\tic.png" alt="Twitch"></a></li>
-   <li><a href="https://coaben.blogspot.com/" target="_blank"><img src="social\blogger.png" alt="WordPress"></a></li>
- </ul>
-</footer>
-
-  <script>
-    // JavaScript pour charger le contenu du fichier texte et afficher le texte et l'image
-    fetch('txt/hounoana.txt')
-      .then(response => response.text())
-      .then(content => {
-        const sections = content.split('||');
-
-        // Créer les éléments HTML pour chaque section
-        sections.forEach(section => {
-          const sectionElement = document.createElement('div');
-          sectionElement.innerHTML = section.replace(/\.\s/g, '.<br>');
-
-          // Ajouter les éléments au div "blog-content"
-          const blogContent = document.getElementById('blog-content');
-          blogContent.appendChild(sectionElement);
-        });
-      })
-      .catch(err => console.error(err));
-  </script>
+      <li><a href="https://www.youtube.com/@coaben" target="_blank"><img src="social\youtube.png" alt="YouTube"></a></li>
+      <li><a href="https://www.instagram.com/coaben2" target="_blank"><img src="social\instagram.png" alt="Instagram"></a></li>
+      <li><a href="https://www.twitch.tv/coaben" target="_blank"><img src="social\tic.png" alt="Twitch"></a></li>
+      <li><a href="https://coaben.blogspot.com/" target="_blank"><img src="social\blogger.png" alt="WordPress"></a></li>
+    </ul>
+  </footer>
+      <script>
+        // JavaScript pour charger le contenu du fichier texte et afficher le texte et l'image
+        fetch('txt/Hounoana.html')  // Chargez le fichier HTML de l'entrée souhaitée
+            .then(response => response.text())
+            .then(content => {
+                const blogContent = document.getElementById('blog-content');
+                blogContent.innerHTML = content;
+            })
+            .catch(err => console.error(err));
+    </script>
 </body>
 </html>
+
