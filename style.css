@@ -189,9 +189,12 @@ h1 {
 }
 
 /* Styles pour l'affichage en taille réelle */
-#imageContainer {
+#image-container {
   position: relative;
+  max-width: 100%;
+  height: auto;
 }
+
 
 #fullImage {
   max-width: 300px;

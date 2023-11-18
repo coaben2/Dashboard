@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
   
     // Fonction pour charger le contenu d'une histoire
     function loadStory(title) {
-      fetch(`assets/txt/${title}.html`)
+      fetch(`assets/${title}.html`)
         .then(response => response.text())
         .then(content => {
           blogContent.innerHTML = content;
