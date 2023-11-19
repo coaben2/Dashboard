@@ -7,7 +7,7 @@ Quelques vocabulaire guildwarsien :
 - CCDLN ou BLTC (Compagnie Commercial du Lion Noir ou Black Lion Trading Company pour la version inglish) : Baaaa c'est l'hv quoi, ou la boutique. Le truc qui te vend aussi bien des items en gems qu'en PO. 
 - Spé Core : C'est lorsque l'on joue une classe avec uniquement les builds (arbres de talents) vanilla. Sans les arbres de spécialisation des classes.
 - TT ou Triple Terreur : World boss composer de trois boss guivres à tuer en simultanée qui requière beaucoup de coordination. Rapporte 2po, potentiellement du stuff élevée (?), ainsi que beaucoup de point de succès et des points de maîtrise de tyrie central. 
-Haradwaith — 29/09/2021 00:10
+
 -  CC  ou  Crowd Control : Tout sorts appliquant du contrôle. On parle de soft ou hard CC. On les utilisent pour casser la barre de défiance (ou la barre verte/bleu). Effets qui appliquent des contrôles immédiat : Étourdissement, Stupeur, Attirer, Eclatement, Repoussement, Flottaison, Couler, Renversement. On privilégie bien évidemment les CC immédiat. Effets qui appliquent des contrôles sur la durée: Peur, Incitation, Immobilisation, Lenteur, Givre, Aveuglement, Faiblesse, Infirmité. 
 - BU ou Back Up : Personne qui reprend le rôle/mécanique si le principal concerné meurt. 
 
