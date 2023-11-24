@@ -197,7 +197,6 @@ h1 {
   align-items: center;
 }
 
-/* Styles pour l'affichage en taille réelle */
 #image-container {
   position: relative;
   max-width: 90%;
@@ -274,8 +273,6 @@ iframe {
   margin-block: auto;
 }
 
-button {}
-
 .titles-container button:hover {
   text-decoration: underline;
 }
@@ -301,8 +298,24 @@ nav button {
 nav button:hover {
   background-color: #0056b3;
 }
-/* Media Queries pour rendre le site responsive */
 
+.portfolio-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px; /* Espacement entre les éléments */
+}
+
+.portfolio-item {
+  text-align: center;
+}
+
+.portfolio-item img {
+  max-width: 100%; /* Pour s'assurer que l'image ne dépasse pas la largeur du conteneur */
+  height: auto; /* Pour maintenir les proportions de l'image */
+}
+pre {
+  bottom: 150px;
+}
 @media screen and (max-width: 768px) {
   body {
     flex-direction: column;
