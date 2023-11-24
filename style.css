@@ -1,26 +1,26 @@
-/* style.css */
-
 /* Réinitialisation des marges et des rembourrages */
-body, h1, h2, p, div, ul, li, a ,header,footer{
-    margin: 0;
-    padding: 0;
-  }
-  
+body, h1, h2, p, div, ul, li, a, header, footer {
+  /* margin: 2px; */
+  /* padding: 1px; */
+}
+
 /* Styles pour le header */
 header {
   position: fixed;
   background-color: #333;
-  color: rgb(0, 0, 0); 
+  color: rgb(0, 0, 0);
   text-align: center;
-  top: 0;
-  left: 0;
-  width: 100%;
+  top: 0px;
+  left: 0px;
+  width: 101%;
   height: 50px;
   z-index: 2;
 }
+
 header h1 {
-  color: #d2691e
+  color: #d2691e;
 }
+
 nav a {
   color: #ff0000;
   text-decoration: none;
@@ -28,13 +28,14 @@ nav a {
 
 nav a:hover {
   text-decoration: underline;
-  color: #00FF00
+  color: #00ff00;
 }
+
 /* Styles pour le footer */
 footer {
-  background-color: #333; 
+  background-color: #333;
   color: rgb(0, 0, 0);
-  position: fixed; 
+  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -42,25 +43,26 @@ footer {
   margin-top: 2px;
   z-index: 2;
 }
+
 .footer-icons img {
   height: 30px;
   margin-right: 10px;
 }
+
 footer ul {
   list-style: none;
   display: flex;
 }
+
 footer li {
   margin-right: 10px;
 }
+
 main {
-  margin-top: 80px;
-  margin-bottom: 32px; 
-  padding: 10px;
-  overflow-y: auto;
-  max-height: calc(100vh - 112px);
+  margin-top: 54px;
+  margin-left: 0%;
+  margin-right: 0%;
 }
-/* Styles pour le menu */
 nav ul {
   list-style: none;
   display: flex;
@@ -69,18 +71,20 @@ nav ul {
 nav li {
   margin-right: 10px;
 }
+
 /* Styles pour le dashboard */
 #dashboard-section {
   display: none; /* Masquer le dashboard par défaut */
   padding: 20px;
-  width: 100%
+  width: 100%;
 }
- /* Centrer le contenu */
- body {
+
+/* Centrer le contenu */
+body {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  /* align-items: center; */
+  min-height: 100vh;
   background-color: #f0f0f0;
   font-family: Arial, sans-serif;
 }
@@ -98,7 +102,8 @@ h1 {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 600px;
+  width: 100%;
+  max-width: 600px;
   background-color: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -122,6 +127,7 @@ h1 {
   margin: 0;
   margin-bottom: 8px;
 }
+
 .stat:last-child {
   border-right: none; /* Pour supprimer la bordure droite du dernier élément */
 }
@@ -131,13 +137,14 @@ h1 {
   color: #007bff;
   margin: 0;
 }
-  
-  /* Ajoutez d'autres styles selon vos préférences */
-  
+
+/* Ajoutez d'autres styles selon vos préférences */
+
 .texte-personnalise {
-  margin-top: 120px
+  margin-top: 120px;
   /* Ajoutez d'autres styles personnalisés si nécessaire */
-}  
+}
+
 /* Styles pour la fenêtre modale */
 .modal {
   display: none;
@@ -168,6 +175,7 @@ h1 {
   font-weight: bold;
   cursor: pointer;
 }
+
 #portfolio {
   display: flex;
   flex-wrap: wrap;
@@ -179,6 +187,7 @@ h1 {
   padding: 10px;
   border: 1px solid #ccc;
 }
+
 #overlay {
   width: 300px;
   height: 300px;
@@ -191,10 +200,9 @@ h1 {
 /* Styles pour l'affichage en taille réelle */
 #image-container {
   position: relative;
-  max-width: 100%;
-  height: auto;
+  max-width: 90%;
+  max-height: 90%;
 }
-
 
 #fullImage {
   max-width: 300px;
@@ -211,33 +219,43 @@ h1 {
   color: #fff;
   cursor: pointer;
 }
+
 #blog-content {
   height: 1000px;
   overflow-y: auto;
   width: 100%;
   margin: 0 auto;
 }
+
 pre {
   font-family: 'arial', monospace;
   font-size: 20px;
   line-height: 1.6;
-  color: #333; 
+  color: #333;
   background-color: #f8f8f8;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
+
 #sidebar {
   width: auto;
   height: auto;
   position: fixed;
-  top: 20px;
+  top: 50px;
   left: 0;
-  background-color: none;
+  background-color: #333;
   overflow-y: auto;
   padding-top: 20px;
   color: white;
   transition: width 0.5s ease;
+}
+iframe {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 50px;
+  left: 200px;
 }
 
 .titles-container {
@@ -245,16 +263,62 @@ pre {
 }
 
 .titles-container button {
-  display: block;
+  /* display: block; */
   width: 100%;
   text-align: left;
-  background-color: transparent;
+  background-color: #007bff;
   color: white;
   border: none;
   outline: none;
   cursor: pointer;
+  margin-block: auto;
 }
+
+button {}
 
 .titles-container button:hover {
   text-decoration: underline;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  margin-right: 10px;
+}
+
+nav button {
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+nav button:hover {
+  background-color: #0056b3;
+}
+/* Media Queries pour rendre le site responsive */
+
+@media screen and (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  #stats-container {
+    max-width: 100%;
+  }
+
+  .stat {
+    width: 100%;
+    border-right: none;
+  }
+}
+#image-container {
+  position: relative;
+  max-width: 50%;
+  max-height: 50%;
 }
