@@ -1,10 +1,3 @@
-/* Réinitialisation des marges et des rembourrages */
-body, h1, h2, p, div, ul, li, a, header, footer {
-  /* margin: 2px; */
-  /* padding: 1px; */
-}
-
-/* Styles pour le header */
 header {
   position: fixed;
   background-color: #333;
@@ -31,7 +24,6 @@ nav a:hover {
   color: #00ff00;
 }
 
-/* Styles pour le footer */
 footer {
   background-color: #333;
   color: rgb(0, 0, 0);
@@ -72,18 +64,16 @@ nav li {
   margin-right: 10px;
 }
 
-/* Styles pour le dashboard */
 #dashboard-section {
-  display: none; /* Masquer le dashboard par défaut */
+  display: none; 
   padding: 20px;
   width: 100%;
 }
 
-/* Centrer le contenu */
+
 body {
   display: flex;
   justify-content: center;
-  /* align-items: center; */
   min-height: 100vh;
   background-color: #f0f0f0;
   font-family: Arial, sans-serif;
@@ -129,7 +119,7 @@ h1 {
 }
 
 .stat:last-child {
-  border-right: none; /* Pour supprimer la bordure droite du dernier élément */
+  border-right: none; 
 }
 
 .stat p {
@@ -138,11 +128,11 @@ h1 {
   margin: 0;
 }
 
-/* Ajoutez d'autres styles selon vos préférences */
+
 
 .texte-personnalise {
   margin-top: 120px;
-  /* Ajoutez d'autres styles personnalisés si nécessaire */
+  
 }
 
 /* Styles pour la fenêtre modale */
@@ -262,7 +252,6 @@ iframe {
 }
 
 .titles-container button {
-  /* display: block; */
   width: 100%;
   text-align: left;
   background-color: #007bff;
@@ -302,7 +291,7 @@ nav button:hover {
 .portfolio-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 16px; /* Espacement entre les éléments */
+  gap: 16px;
 }
 
 .portfolio-item {
@@ -310,12 +299,10 @@ nav button:hover {
 }
 
 .portfolio-item img {
-  max-width: 100%; /* Pour s'assurer que l'image ne dépasse pas la largeur du conteneur */
-  height: auto; /* Pour maintenir les proportions de l'image */
+  max-width: 100%; 
+  height: auto; 
 }
-pre {
-  bottom: 150px;
-}
+
 @media screen and (max-width: 768px) {
   body {
     flex-direction: column;
