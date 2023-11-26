@@ -1,44 +1,97 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="fr">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
-  </style
-  </head>
-<body>
-  <header>
-    <nav>
+    <script src="script.js"></script>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .pic-ctn {
+            position: relative;
+            width: 100vw;
+            height: 300px;
+            margin-top: 15vh;
+            overflow: hidden; /* Pour cacher les images qui dépassent de la largeur de .pic-ctn */
+        }
+
+        .pic-ctn img {
+            position: absolute;
+            top: 0;
+            left: calc(10% - 100px);
+            opacity: 0;
+            animation: display 10s infinite;
+        }
+
+        @keyframes display {
+            0%, 100% {
+                transform: translateX(200px);
+                opacity: 0;
+            }
+            10%, 20% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            30%, 40%, 50%, 60%, 70%, 80%, 90% {
+                transform: translateX(-200px);
+                opacity: 0;
+            }
+        }
+
+        .pic-ctn img:nth-child(2) { animation-delay: 2s; }
+    </style>
+</head>
+  <body>
+    <header>
+      <nav>
         <ul>
           <li><button onclick="window.location.href='index.html'" id="index-link">Accueil</button></li>
           <li><button onclick="window.location.href='blog.html'" id="blog-link">Blog</button></li>
           <li><button onclick="window.location.href='portfolio.html'" id="portfolio-link">Portfolio</button></li>
         </ul>
-    </nav>
-  </header>
+      </nav>
+    </header>
 
-  <main>
-    <h1>Portfolio</h1>
-    <div class="portfolio-container">
-      <div class="portfolio-item">
-        <p>Hounoana</p>
-        <img src="assets\image\I1-001.png">" 
-      </div>
-
-      <div class="portfolio-item">
-        <p>murloc</p>
-        <img src="assets\image\Murloc.jpg"
-      </div>
-    </div>
-  </main>
-
-  <footer>
-    <ul>
-   <li><a href="https://www.youtube.com/@coaben" target="_blank"><img src="assets\social\youtube.png" alt="YouTube"></a></li>
-   <li><a href="https://www.instagram.com/coaben2" target="_blank"><img src="assets\social\instagram.png" alt="Instagram"></a></li>
-   <li><a href="https://www.twitch.tv/coaben" target="_blank"><img src="assets\social\tic.png" alt="Twitch"></a></li>
-   <li><a href="https://coaben.blogspot.com/" target="_blank"><img src="assets\social\blogger.png" alt="WordPress"></a></li>
- </ul>
-</footer>
-  <script src="script.js"></script>
-</body>
+    </head>
+    <body>
+        <main>
+          
+            <div class="pic-ctn">
+              <img class="image-container" src="assets\image\I1-001.png" alt="" class="pic">
+              <img class="image-container" src="assets\image\I1-002.png" alt="" class="pic">
+              <img class="image-container" src="assets\image\I1-003.jpg" alt="" class="pic">
+              <img class="image-container" src="assets\image\I1-004.png" alt="" class="pic"> 
+              <img class="image-container" src="assets\image\I1-005.png" alt="" class="pic">
+              <img class="image-container" src="assets\image\I1-006.png" alt="" class="pic">
+              <img class="image-container" src="assets\image\I1-007.png" alt="" class="pic">
+              <img class="image-container" src="assets\image\I1-007.jpg" style="max-width: 50%;" alt="" class="pic">
+              <img class="image-container" src="assets\image\I1-008.png" alt="" class="pic">
+              <img class="image-container" src="assets\image\I1-009.png" alt="" class="pic">
+              <img class="image-container" src="assets\image\I1-010.png" alt="" class="pic">
+              <img class="image-container" src="assets\image\I1-011.jpg" alt="" class="pic">
+              <img class="image-container" src="assets\image\I1-012.png" alt="" class="pic">
+              <img class="image-container" src="assets\image\I1-013.jpg" alt="" class="pic">
+              <img class="image-container" src="assets\image\I1-014.jpg" alt="" class="pic">
+              <img class="image-container" src="assets\image\I1-015.png" alt="" class="pic">
+              <img class="image-container" src="assets\image\I1-016.png" alt="" class="pic">
+              <img class="image-container" src="assets\image\I1-017.jpg" style="max-width: 50%;" alt="" class="pic">
+            </div>
+            
+        </main>   
+    </body>
+  
+    <footer>
+      <ul>
+        <li><a href="https://www.youtube.com/@coaben" target="_blank"><img src="assets/social/youtube.png" alt="YouTube"></a></li>
+        <li><a href="https://www.instagram.com/coaben2" target="_blank"><img src="assets/social/instagram.png" alt="Instagram"></a></li>
+        <li><a href="https://www.twitch.tv/coaben" target="_blank"><img src="assets/social/tic.png" alt="Twitch"></a></li>
+        <li><a href="https://coaben.blogspot.com/" target="_blank"><img src="assets/social/blogger.png" alt="WordPress"></a></li>
+      </ul>
+    </footer>
+  </body>
 </html>
+

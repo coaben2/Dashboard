@@ -51,9 +51,10 @@ footer li {
 }
 
 main {
-  margin-top: 54px;
+  margin-top: 100px;
   margin-left: 0%;
   margin-right: 0%;
+  max-height: 100vh;
 }
 nav ul {
   list-style: none;
@@ -128,14 +129,10 @@ h1 {
   margin: 0;
 }
 
-
-
 .texte-personnalise {
   margin-top: 120px;
-  
 }
 
-/* Styles pour la fenêtre modale */
 .modal {
   display: none;
   position: fixed;
@@ -187,10 +184,15 @@ h1 {
   align-items: center;
 }
 
-#image-container {
+.image-container {
   position: relative;
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 100%;
+  max-height: 100%;
+  transition: all 10s ease;
+}
+.image-container:hover {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 #fullImage {
@@ -244,7 +246,7 @@ iframe {
   height: 100%;
   position: fixed;
   top: 50px;
-  left: 200px;
+  left: 250px;
 }
 
 .titles-container {
@@ -302,7 +304,6 @@ nav button:hover {
   max-width: 100%; 
   height: auto; 
 }
-
 @media screen and (max-width: 768px) {
   body {
     flex-direction: column;
@@ -316,9 +317,9 @@ nav button:hover {
     width: 100%;
     border-right: none;
   }
-}
-#image-container {
-  position: relative;
-  max-width: 50%;
-  max-height: 50%;
+  .image-container {
+    position: relative;
+    max-width: 50%;
+    max-height: 50%;
+  }
 }
