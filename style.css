@@ -243,11 +243,13 @@ header {
     transition: width 0.5s ease;
   }
   iframe {
+    /* border-top: 150px; */
     width: 100%;
     height: 100%;
     position: fixed;
-    top: 50px;
-    left: 250px;
+    top: 100px;
+    left: 1%;
+    /* margin: 0px; */
   }
   
   .titles-container {
@@ -255,6 +257,7 @@ header {
   }
   
   .titles-container button {
+    max-width: max-content;
     width: 100%;
     text-align: left;
     background-color: #007bff;
