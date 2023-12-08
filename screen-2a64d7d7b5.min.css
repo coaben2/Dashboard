@@ -1,0 +1,2359 @@
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block
+}
+
+body {
+    line-height: 1
+}
+
+ol, ul {
+    list-style: none
+}
+
+blockquote, q {
+    quotes: none
+}
+
+blockquote:after, blockquote:before, q:after, q:before {
+    content: "";
+    content: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box
+}
+
+html {
+    height: 100%
+}
+
+body {
+    line-height: 140%;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    background: #f9f9f9 url(../img/handmadepaper.png);
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 60px 20px 30px;
+    position: relative;
+    min-height: 100%;
+    color: #303030
+}
+
+body>div {
+    padding: 5px 0
+}
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    right: 20px
+}
+
+footer form {
+    display: inline
+}
+
+footer form input {
+    background: none;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    color: blue;
+    padding: 0;
+    color: #33b5e5;
+    transition: all .2s ease-out
+}
+
+footer form input:hover {
+    color: #09c;
+    text-decoration: underline
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 140%;
+    font-family: Roboto Condensed, sans-serif;
+    padding: 5px 0
+}
+
+h1 {
+    font-size: 32px
+}
+
+h1 img {
+    width: 24px
+}
+
+h2 {
+    font-size: 28px
+}
+
+body>h2 {
+    margin-top: 10px
+}
+
+h3 {
+    font-size: 24px
+}
+
+h4 {
+    font-size: 20px
+}
+
+h5 {
+    font-size: 18px
+}
+
+h6 {
+    font-size: 16px;
+    padding: 0
+}
+
+small {
+    font-size: 85%
+}
+
+.inactive {
+    opacity: .5
+}
+
+header {
+    margin-bottom: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #f8f8f8;
+    box-shadow: 0 1.5px 4px rgba(0, 0, 0, .24), 0 1.5px 6px rgba(0, 0, 0, .12);
+    z-index: 2
+}
+
+footer, h2, h3, header {
+    text-align: center
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both
+}
+
+a {
+    text-decoration: none;
+    color: #33b5e5;
+    transition: all .2s ease-out
+}
+
+a:active, a:hover {
+    color: #09c;
+    text-decoration: underline
+}
+
+.btn {
+    display: inline-block;
+    background: #33b5e5;
+    color: #fff;
+    padding: 2px 8px
+}
+
+.btn:hover {
+    background: #09c;
+    color: #fff;
+    text-decoration: none
+}
+
+.btn[disabled] {
+    opacity: .3
+}
+
+.bag .item {
+    color: #303030
+}
+
+.Legendary, .Legendary a {
+    color: #93c
+}
+
+.item.Legendary img {
+    border: 1px solid #93c
+}
+
+.Ascended, .Ascended a {
+    color: #f48
+}
+
+.item.Ascended img {
+    border: 1px solid #f48
+}
+
+.Exotic, .Exotic a {
+    color: #fda500
+}
+
+.item.Exotic img {
+    border: 1px solid #fda500
+}
+
+.Rare, .Rare a {
+    color: #ff0
+}
+
+.item.Rare img {
+    border: 1px solid #ff0
+}
+
+.Masterwork, .Masterwork a {
+    color: #3c1
+}
+
+.item.Masterwork img {
+    border: 1px solid #3c1
+}
+
+.Fine, .Fine a {
+    color: #4f9dfe
+}
+
+.item.Fine img {
+    border: 1px solid #4f9dfe
+}
+
+.Basic, .Basic a {
+    color: #f8f8f8
+}
+
+.item.Basic img, .item.Junk img, .item img {
+    border: 1px solid #000
+}
+
+.reminder {
+    color: #999
+}
+
+.flavor {
+    color: #0ff
+}
+
+body>aside>nav {
+    text-align: center;
+    font-family: Roboto Condensed, sans-serif;
+    font-size: 18px;
+    padding: 10px 0
+}
+
+body>aside>nav a {
+    padding: 5px 10px;
+    display: inline-block;
+    border-bottom: 2px solid transparent
+}
+
+body>aside>nav a.selected, body>aside>nav a:hover {
+    text-decoration: none;
+    border-bottom: 2px solid;
+    color: #09c
+}
+
+body>aside>nav a i {
+    vertical-align: middle;
+    margin-top: -4px
+}
+
+#mainMenu h2 i {
+    vertical-align: middle;
+    margin-top: -6px;
+    font-size: 28px
+}
+
+#worldName {
+    margin-left: 15px
+}
+
+#worldName:hover {
+    text-decoration: none
+}
+
+#tabContainer {
+    position: relative
+}
+
+section {
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+    position: absolute;
+    top: 5px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity .3s ease-out
+}
+
+section.visible {
+    height: auto;
+    overflow: visible;
+    opacity: 1;
+    position: static;
+    z-index: 1
+}
+
+section.closing {
+    height: auto
+}
+
+p {
+    padding: 5px 0
+}
+
+strong {
+    font-weight: 700
+}
+
+em {
+    font-style: italic
+}
+
+.intro {
+    width: 40%;
+    min-width: 310px;
+    margin: 128px auto 0
+}
+
+#settings .link .btn i {
+    vertical-align: middle
+}
+
+.flex-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap
+}
+
+.flex-container>* {
+    margin-right: 2%;
+    margin-bottom: 10px
+}
+
+.flex-container>:last-child {
+    margin-right: 0
+}
+
+.details .flex-container {
+    justify-content: flex-start
+}
+
+table {
+    width: 100%
+}
+
+tbody tr {
+    transition: background .2s ease-out
+}
+
+tbody tr:nth-child(odd) {
+    background: rgba(0, 0, 0, .1)
+}
+
+tbody tr:hover {
+    background: rgba(0, 0, 0, .2)
+}
+
+th {
+    font-weight: 700;
+    text-align: left;
+    padding: 3px 5px
+}
+
+th:first-child {
+    padding-left: 0
+}
+
+th:left-child {
+    padding-right: 0
+}
+
+td {
+    vertical-align: middle;
+    padding: 3px 5px;
+    white-space: nowrap
+}
+
+td:nth-child(2) {
+    white-space: normal
+}
+
+td:first-child {
+    width: 32px
+}
+
+td:first-child img {
+    display: block;
+    width: 32px;
+    height: 32px
+}
+
+td:nth-child(4) img {
+    vertical-align: middle;
+    margin-top: -1px;
+    margin-left: 1px;
+    width: 10px
+}
+
+td a {
+    font-weight: 500
+}
+
+td a, td span {
+    text-shadow: -1px 0 1px #000, 1px 0 1px #000, 0 1px 1px #000, 0 -1px 1px #000
+}
+
+#characters .details .guild img {
+    width: 128px;
+    height: 128px
+}
+
+#showSettings {
+    position: absolute;
+    top: 15px;
+    right: 10px
+}
+
+#hideMenu, #showMenu {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    display: none
+}
+
+#hideMenu {
+    padding: 0;
+    border: 0
+}
+
+#hideMenu:hover {
+    border: 0
+}
+
+#settings {
+    position: fixed;
+    z-index: 1;
+    background: #f9f9f9;
+    left: 0;
+    right: 0;
+    text-align: center;
+    box-shadow: 0 1.5px 4px rgba(0, 0, 0, .24), 0 1.5px 6px rgba(0, 0, 0, .12);
+    padding: 10px 0;
+    margin-top: -6px;
+    -webkit-transform: translate3d(0, -105%, 0);
+    transform: translate3d(0, -105%, 0);
+    transition: all .3s ease-out
+}
+
+#settings.visible {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+}
+
+#itemLinks {
+    padding: 3px
+}
+
+#traitDetails {
+    position: absolute;
+    background: rgba(0, 0, 0, .9);
+    max-width: 250px;
+    padding: 10px;
+    color: #fff;
+    z-index: -1;
+    opacity: 0
+}
+
+#traitDetails.visible {
+    opacity: 1;
+    z-index: 20
+}
+
+#traitDetails .trait-name {
+    font-size: 16px
+}
+
+.trait {
+    cursor: help
+}
+
+#traitDetails .description {
+    padding: 5px 0
+}
+
+#traitDetails .facts, #traitDetails .skills {
+    font-size: 12px;
+    line-height: 14px
+}
+
+#traitDetails .facts>div, #traitDetails .skills>div {
+    padding: 3px 0
+}
+
+#traitDetails .flex-container {
+    justify-content: flex-start;
+    align-items: center
+}
+
+#traitDetails .flex-container>* {
+    margin-bottom: 0
+}
+
+#traitDetails .details {
+    max-width: 195px
+}
+
+#traitDetails .details.short {
+    max-width: 160px
+}
+
+#traitDetails .icon {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    margin-right: 3px;
+    width: auto
+}
+
+#traitDetails .icon img {
+    display: block;
+    width: 32px;
+    height: 32px
+}
+
+#traitDetails .recharge {
+    position: absolute;
+    top: 9px;
+    right: 10px;
+    font-size: 15px
+}
+
+#traitDetails .recharge .material-icons {
+    vertical-align: middle;
+    margin-top: -3px;
+    font-size: 15px
+}
+
+#traitDetails .intensity {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    text-shadow: -1px 0 1px #000, 1px 0 1px #000, 0 1px 1px #000, 0 -1px 1px #000
+}
+
+#skillDetails {
+    position: absolute;
+    left: calc(100% + 5px);
+    top: 0;
+    width: 250px;
+    background: rgba(0, 0, 0, .9)
+}
+
+#skillDetails.left {
+    left: calc(-100% - 5px)
+}
+
+#skillDetails.bottom {
+    top: auto;
+    bottom: 0
+}
+
+#skillDetails small {
+    display: block;
+    margin: 10px;
+    font-size: 12px
+}
+
+.skill-name img {
+    width: 32px;
+    vertical-align: middle
+}
+
+.skill-details {
+    display: none;
+    margin: 10px
+}
+
+.skill-details.visible {
+    display: block
+}
+
+.skill-details .flex-container {
+    font-size: 12px;
+    line-height: 14px;
+    padding: 3px 0
+}
+
+.skill-name {
+    font-size: 16px
+}
+
+#itemDetails {
+    position: absolute;
+    background: rgba(0, 0, 0, .9);
+    max-width: 300px;
+    padding: 10px;
+    color: #fff;
+    z-index: -1;
+    opacity: 0
+}
+
+#itemDetails.visible {
+    opacity: 1;
+    z-index: 20
+}
+
+#itemDetails.skin .icon-name {
+    line-height: 28px
+}
+
+#itemDetails.skin .icon-name img, #itemDetails.trait .icon-name img {
+    display: none
+}
+
+#itemDetails .close, #traitDetails .close {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    opacity: 0
+}
+
+#itemDetails .max, #itemDetails .min, #itemDetails .stats {
+    color: #9c0
+}
+
+#itemDetails .bonuses, #itemDetails .buff, #itemDetails .infusions, #itemDetails .upgrades {
+    color: #33b5e5
+}
+
+#itemDetails .bonuses, #itemDetails .infusions, #itemDetails .rarity, #itemDetails .transmuted, #itemDetails .upgrades {
+    margin-top: 10px
+}
+
+#itemDetails .link {
+    margin-top: 10px;
+    display: none
+}
+
+#itemDetails .icon-name img {
+    width: 32px;
+    height: 32px;
+    vertical-align: middle
+}
+
+#itemDetails .infusions img, #itemDetails .upgrades img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle
+}
+
+#itemDetails .bonuses span, #itemDetails .stats span {
+    display: block
+}
+
+#itemDetails .values {
+    margin-top: 10px
+}
+
+#itemDetails .values img {
+    vertical-align: middle;
+    margin-top: -1px;
+    margin-left: 1px;
+    width: 10px
+}
+
+.gold {
+    color: gold
+}
+
+.silver {
+    color: #ddd
+}
+
+.copper {
+    color: #c87533
+}
+
+#characters ul {
+    width: 150px;
+    position: absolute
+}
+
+#characters ul a {
+    display: block;
+    transform-origin: left;
+    font-size: 18px;
+    -webkit-transform: scale(.8);
+    transform: scale(.8)
+}
+
+#characters ul a.selected, #characters ul a:hover {
+    color: #09c;
+    text-decoration: none;
+    -webkit-transform: scale(1);
+    transform: scale(1)
+}
+
+.char-list-wrap {
+    display: none;
+    border-bottom: 1px solid #33b5e5;
+    margin-bottom: 15px;
+    padding-bottom: 5px
+}
+
+#charList {
+    font-size: 24px;
+    font-family: Roboto Condensed, sans-serif;
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    color: #33b5e5;
+    margin-left: -4px;
+    height: 29px
+}
+
+#charList:hover {
+    color: #09c
+}
+
+#characters .char-details {
+    position: relative
+}
+
+#characters .char-details>div {
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity .3s ease-out
+}
+
+#characters .char-details>div.collapsed {
+    height: 0;
+    position: absolute
+}
+
+#characters .char-details>div.visible {
+    opacity: 1;
+    height: auto;
+    position: static;
+    overflow: visible
+}
+
+#characters .crafting span {
+    display: block
+}
+
+#characters .details img {
+    vertical-align: middle;
+    width: 30px;
+    height: 30px
+}
+
+#characters h5:first-child {
+    padding-top: 0
+}
+
+.equipment h4 {
+    padding-top: 0;
+    border-bottom: 1px solid #33b5e5
+}
+
+.equipment h4, .subtabs nav, .subtabs nav a {
+    margin-bottom: 10px
+}
+
+.subtabs nav a {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 20px;
+    border-bottom: 2px solid transparent;
+    font-family: Roboto Condensed;
+    padding-bottom: 5px
+}
+
+.subtabs nav a:last-child {
+    margin-right: 0
+}
+
+.subtabs nav a.selected, .subtabs nav a:hover {
+    text-decoration: none;
+    color: #09c;
+    border-bottom: 2px solid #09c
+}
+
+.char-details .details {
+    width: 180px;
+    position: absolute
+}
+
+.char-details .subtabs {
+    margin-left: 190px;
+    position: relative
+}
+
+.char-details .subtabs .subtabs {
+    margin-left: 0
+}
+
+.char-info i {
+    vertical-align: middle;
+    margin-top: -4px;
+    padding: 3px 0;
+    font-size: 30px
+}
+
+.subtabs>div {
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+    overflow: hidden;
+    transition: opacity .3s ease-out
+}
+
+.subtabs>div.collapsed {
+    height: 0
+}
+
+.subtabs>div.visible {
+    opacity: 1;
+    height: auto;
+    position: static;
+    overflow: visible
+}
+
+#tradingPost nav {
+    text-align: center;
+    margin-top: 10px
+}
+
+.equipment>.flex-container {
+    justify-content: flex-start
+}
+
+.equipment>.flex-container>div {
+    flex-grow: 1
+}
+
+.equipment .item {
+    display: inline-block;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    vertical-align: top
+}
+
+.equipment .item img {
+    width: 48px;
+    height: 48px;
+    vertical-align: middle
+}
+
+.equipment .item.small img {
+    width: 32px;
+    height: 32px;
+    vertical-align: bottom
+}
+
+.bag {
+    padding-bottom: 15px
+}
+
+.bag .item img {
+    width: 48px;
+    height: 48px
+}
+
+.bag div.item img {
+    vertical-align: middle;
+    margin-bottom: 5px
+}
+
+.bag a.item {
+    position: relative
+}
+
+.bag .item.empty, .bag a.item {
+    display: inline-block;
+    margin-right: 5px
+}
+
+.bag .item.empty {
+    border: 1px solid #000;
+    width: 48px;
+    height: 48px
+}
+
+.bag a.item img {
+    display: block;
+    max-width: 100%
+}
+
+.bag a.item span {
+    position: absolute;
+    right: 2px;
+    bottom: 0;
+    color: #fff;
+    line-height: 100%;
+    text-shadow: -1px 0 1px #000, 1px 0 1px #000, 0 1px 1px #000, 0 -1px 1px #000
+}
+
+.item-list .item {
+    display: inline-block;
+    position: relative;
+    margin-right: 5px
+}
+
+.item-list .item img {
+    width: 48px;
+    height: 48px;
+    display: block;
+    max-width: 100%
+}
+
+.specialization {
+    margin-bottom: 10px
+}
+
+.specialization>div {
+    overflow: hidden;
+    position: relative;
+    max-width: 650px;
+    border: 1px solid #000
+}
+
+.specialization img.background {
+    display: block;
+    width: 158.26%;
+    margin-top: -18.5%
+}
+
+.specialization .icon {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 17.5%
+}
+
+.specialization span {
+    display: inline-block;
+    position: absolute;
+    width: 6%
+}
+
+.specialization span img {
+    display: block;
+    width: 100%;
+    border: 0
+}
+
+span.minor.trait-1 {
+    top: 35%;
+    left: 31%
+}
+
+span.minor.trait-2 {
+    top: 35%;
+    left: 53%
+}
+
+span.minor.trait-3 {
+    top: 35%;
+    left: 75%
+}
+
+span.major {
+    opacity: .3
+}
+
+span.major.selected {
+    opacity: 1
+}
+
+span.major.trait-1 {
+    top: 4%;
+    left: 42%
+}
+
+span.major.trait-2 {
+    top: 35%;
+    left: 42%
+}
+
+span.major.trait-3 {
+    top: 67%;
+    left: 42%
+}
+
+span.major.trait-4 {
+    top: 4%;
+    left: 64%
+}
+
+span.major.trait-5 {
+    top: 35%;
+    left: 64%
+}
+
+span.major.trait-6 {
+    top: 67%;
+    left: 64%
+}
+
+span.major.trait-7 {
+    top: 4%;
+    left: 86%
+}
+
+span.major.trait-8 {
+    top: 35%;
+    left: 86%
+}
+
+span.major.trait-9 {
+    top: 67%;
+    left: 86%
+}
+
+.build-skill {
+    width: 64px;
+    display: inline-block;
+    margin-right: 5px;
+    position: relative
+}
+
+.build-skill .skill-details {
+    display: none;
+    background: #000;
+    color: #fff;
+    width: 300px;
+    position: absolute;
+    padding: 10px;
+    margin: 0
+}
+
+.build-skill:hover .skill-details {
+    display: block;
+    bottom: 0;
+    left: calc(100% + 5px);
+    z-index: 1
+}
+
+.build-skill .skill-details .recharge {
+    position: absolute;
+    top: 9px;
+    right: 10px;
+    font-size: 15px;
+    width: auto
+}
+
+.build-skill .skill-details .recharge .material-icons {
+    vertical-align: middle;
+    margin-top: -3px;
+    font-size: 15px
+}
+
+.build-skill .skill-details .intensity {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    text-shadow: -1px 0 1px #000, 1px 0 1px #000, 0 1px 1px #000, 0 -1px 1px #000
+}
+
+.build-skill .skill-details .flex-container {
+    justify-content: flex-start;
+    align-items: center
+}
+
+.build-skill .skill-details .facts>div {
+    padding: 3px 0
+}
+
+.build-skill .skill-details .icon {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    margin-right: 3px;
+    margin-bottom: 0;
+    width: auto
+}
+
+.build-skill .skill-details .icon img {
+    display: block;
+    width: 32px;
+    height: 32px
+}
+
+.build-skill .skill-details .details {
+    position: static;
+    margin-bottom: 0;
+    width: calc(100% - 35px)
+}
+
+.build-skill .skill-details .details.short {
+    width: calc(100% - 80px)
+}
+
+.build-skill>img {
+    max-width: 100%;
+    display: block
+}
+
+.pvp-equip a {
+    display: inline-block;
+    width: 64px;
+    margin-right: 5px
+}
+
+.pvp-equip a img {
+    max-width: 100%;
+    display: block
+}
+
+#pvp h3, #pvp nav {
+    text-align: center
+}
+
+#pvp .stats h4 {
+    border-bottom: 1px solid #33b5e5;
+    margin-bottom: 10px
+}
+
+#pvp h6 {
+    margin-bottom: 5px
+}
+
+#pvp h6 span {
+    float: right
+}
+
+#pvp .games h4 {
+    padding-top: 0
+}
+
+#pvp .pvp-rank {
+    background: rgba(51, 181, 229, .1);
+    padding-right: 10px;
+    font-size: 20px
+}
+
+#pvp .pvp-rank, #pvp .stat-summary {
+    margin-bottom: 10px
+}
+
+#pvp .stat-summary small {
+    text-align: center
+}
+
+#pvp .stat-summary .pips {
+    margin-bottom: 20px
+}
+
+#pvp .pvp-rank img {
+    vertical-align: middle;
+    width: 100px;
+    height: 100px
+}
+
+#pvp .by-profession img {
+    vertical-align: middle;
+    width: 64px;
+    height: 64px;
+    float: left;
+    margin-right: 5px
+}
+
+#pvp .by-profession h5 {
+    padding-top: 0;
+    padding-bottom: 4px
+}
+
+#pvp .games>div {
+    margin: 0 auto;
+    max-width: 560px;
+    padding-top: 20px
+}
+
+#pvp .games>div:first-child {
+    padding-top: 10px
+}
+
+#pvp .games .flex-container img {
+    vertical-align: middle;
+    width: 32px;
+    height: 32px
+}
+
+#pvp .map-img {
+    width: 234px;
+    float: left;
+    margin-right: 10px
+}
+
+#pvp .games>div:nth-child(2n) .map-img {
+    float: right;
+    margin-right: 0;
+    margin-left: 10px
+}
+
+#pvp .progress-bar {
+    line-height: 0;
+    font-size: 0;
+    margin: 0 0 20px;
+    max-width: 100%
+}
+
+#pvp .games .progress-bar {
+    width: 316px
+}
+
+#pvp .games .progress-bar, #pvp .progress-bar>div {
+    display: inline-block;
+    height: 5px
+}
+
+#pvp .progress-bar>div.wins {
+    background: #690
+}
+
+#pvp .progress-bar>div.losses, #pvp .progress-bar>div.red-score {
+    background: #c00
+}
+
+#pvp .progress-bar>div.blue-score {
+    background: #09c
+}
+
+.chart-container {
+    margin-bottom: 20px
+}
+
+.chart-container figcaption {
+    font-size: 16px;
+    line-height: 120%;
+    margin-left: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    text-shadow: -1px 0 1px #000, 1px 0 1px #000, 0 1px 1px #000, 0 -1px 1px #000;
+    font-weight: 500
+}
+
+.chart-container canvas {
+    vertical-align: middle
+}
+
+.Guardian {
+    color: #00b4ff
+}
+
+.Warrior {
+    color: #f79d00
+}
+
+.Engineer {
+    color: #ffde00
+}
+
+.Ranger {
+    color: #d4eb00
+}
+
+.Thief {
+    color: #ff5300
+}
+
+.Elementalist {
+    color: #ff0078
+}
+
+.Mesmer {
+    color: #ff00f0
+}
+
+.Necromancer {
+    color: #b4ef00
+}
+
+.Revenant {
+    color: red
+}
+
+.Bye, .Victory {
+    color: #690
+}
+
+.Defeat, .Desertion, .Forfeit, .red-score, .Red-team {
+    color: #c00
+}
+
+.blue-score, .Blue-team {
+    color: #09c
+}
+
+.stats .stat-breakdown {
+    flex-grow: 1;
+    max-width: 320px
+}
+
+.stat-summary .flex-container {
+    text-align: center;
+    justify-content: space-between
+}
+
+.stat-summary .flex-container>div {
+    padding: 0 5px
+}
+
+.stat-breakdown .flex-container {
+    text-align: center;
+    justify-content: space-between
+}
+
+.stat-breakdown .flex-container>div {
+    padding-left: 10px
+}
+
+.stat-breakdown .flex-container>div:first-child {
+    padding-left: 0
+}
+
+.big-stat {
+    font-size: 18px;
+    display: block
+}
+
+.game-score {
+    font-size: 24px;
+    display: block;
+    padding-left: 10px
+}
+
+.games .flex-container {
+    justify-content: space-between;
+    align-items: center;
+    max-width: 316px
+}
+
+.games .flex-container>div {
+    position: relative;
+    margin-bottom: 0
+}
+
+.soloarenarated, .teamarenarated {
+    opacity: .5
+}
+
+.standings {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap
+}
+
+.standings>div {
+    padding: 10px 20px
+}
+
+.division, .standings>div {
+    text-align: center
+}
+
+.division img {
+    width: 480px;
+    max-width: 100%
+}
+
+.division h5 {
+    padding-bottom: 0
+}
+
+.pips {
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px
+}
+
+.pips, .tier {
+    display: flex
+}
+
+.tier {
+    margin-left: 10px
+}
+
+.tier:first-child {
+    margin-left: 0
+}
+
+.pip {
+    height: 42px;
+    width: 12px;
+    background-size: 384px;
+    background-position: -66px -27px;
+    opacity: .3;
+    position: relative;
+    overflow: hidden
+}
+
+.pip.earned {
+    opacity: 1
+}
+
+.pip img {
+    width: 384px;
+    position: absolute;
+    top: -27px;
+    left: -66px;
+    -webkit-filter: drop-shadow(1px 1px 0 #333);
+    filter: drop-shadow(1px 1px 0 #333)
+}
+
+.pip.earned img.pip-1 {
+    left: -19px
+}
+
+.pip.earned img.pip-2 {
+    left: -67px
+}
+
+.pip.earned img.pip-3 {
+    left: -115px
+}
+
+.pip.earned img.pip-4 {
+    left: -163px
+}
+
+.pip.earned img.pip-5 {
+    left: -211px
+}
+
+.pip.earned img.pip-6 {
+    left: -259px
+}
+
+.pip.earned img.pip-7 {
+    left: -307px
+}
+
+#bank .item-list, #collectibles .item-list {
+    max-width: 530px;
+    margin: 0 auto
+}
+
+#bank .item-list .item.empty {
+    display: inline-block;
+    margin-right: 5px;
+    border: 1px solid #000;
+    width: 48px;
+    height: 48px
+}
+
+#bank, #collectibles {
+    text-align: center
+}
+
+#bank .item-list, #collectibles .item-list {
+    text-align: left
+}
+
+#characters .total-values {
+    float: right
+}
+
+#bank .total-values, #collectibles .total-values {
+    display: none
+}
+
+#bank .total-values.visible, #collectibles .total-values.visible, .total-values {
+    display: inline-block
+}
+
+.total-values {
+    background: rgba(0, 0, 0, .9);
+    padding: 5px 10px;
+    color: #fff;
+    margin-bottom: 10px;
+    position: relative
+}
+
+.total-values i {
+    vertical-align: top;
+    font-size: 18px;
+    margin-left: 10px;
+    cursor: help;
+    color: #33b5e5
+}
+
+.total-values i:hover {
+    color: #09c
+}
+
+.total-values .info {
+    position: absolute;
+    background: rgba(0, 0, 0, .9);
+    padding: 10px;
+    margin-top: 5px;
+    width: 100%;
+    left: 0;
+    text-align: left;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity .3s ease-out, z-index .3s ease-out
+}
+
+.total-values i:hover~.info {
+    opacity: 1;
+    z-index: 20
+}
+
+.total-values img {
+    vertical-align: middle;
+    margin-top: -1px;
+    margin-left: 1px;
+    width: 10px
+}
+
+.total-vendor {
+    margin-right: 20px
+}
+
+#collectibles .item-list .item.empty {
+    opacity: .2
+}
+
+#collectibles h4 {
+    text-align: center
+}
+
+.item-list a.item span {
+    position: absolute;
+    right: 2px;
+    bottom: 0;
+    color: #fff;
+    line-height: 100%;
+    text-shadow: -1px 0 1px #000, 1px 0 1px #000, 0 1px 1px #000, 0 -1px 1px #000
+}
+
+#wallet>div {
+    max-width: 530px;
+    margin: 0 auto
+}
+
+#wallet h4 {
+    display: inline-block;
+    float: left;
+    line-height: 22px;
+    max-width: 70%;
+    text-align: left
+}
+
+#wallet .icon {
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+    margin-left: 5px
+}
+
+#wallet .quantity {
+    display: inline-block;
+    font-size: 16px;
+    vertical-align: middle;
+    font-weight: 500
+}
+
+#wallet .quantity img {
+    vertical-align: middle;
+    margin-top: -1px;
+    margin-left: 2px;
+    width: 13px
+}
+
+.wallet-items>div {
+    text-align: right;
+    padding: 5px 10px
+}
+
+.wallet-items>div:after {
+    content: "";
+    display: table;
+    clear: both
+}
+
+.wallet-items>div:hover {
+    background: rgba(0, 0, 0, .1)
+}
+
+.wallet-items>div[data-id="17"] {
+    display: none
+}
+
+.wallet-items>div[data-id="1"] .quantity, .wallet-items>div[data-id="2"] .quantity {
+    text-shadow: -1px 0 1px #000, 1px 0 1px #000, 0 1px 1px #000, 0 -1px 1px #000
+}
+
+.wallet-items>div[data-id="2"] .quantity {
+    color: #e460fb
+}
+
+.wallet-items>div[data-id="3"] .quantity {
+    text-shadow: -1px 0 1px #000, 1px 0 1px #000, 0 1px 1px #000, 0 -1px 1px #000;
+    color: #9c0
+}
+
+.wallet-items>div[data-id="4"] .quantity {
+    text-shadow: -1px 0 1px #000, 1px 0 1px #000, 0 1px 1px #000, 0 -1px 1px #000;
+    color: #33b5e5
+}
+
+#unlocks nav {
+    text-align: center;
+    margin-top: 10px
+}
+
+#unlocks>div {
+    margin: 0 auto
+}
+
+#unlocks>div, #unlocks>div>div {
+    max-width: 530px
+}
+
+#unlocks .skins a {
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 5px
+}
+
+#unlocks .dyes a, #unlocks .skins a img {
+    width: 48px;
+    height: 48px
+}
+
+#unlocks .dyes a {
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 5px
+}
+
+#unlocks .dyes a img {
+    width: 48px;
+    height: 48px
+}
+
+#unlocks .minis a {
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 5px
+}
+
+#unlocks .minis a img {
+    width: 48px;
+    height: 48px
+}
+
+#unlocks .finishers {
+    display: flex;
+    flex-wrap: wrap
+}
+
+#unlocks .finishers>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    width: 100%
+}
+
+#unlocks .finishers>div:hover {
+    background: rgba(0, 0, 0, .1)
+}
+
+#unlocks .finishers img {
+    width: 64px;
+    height: 64px;
+    vertical-align: middle;
+    margin-left: 5px
+}
+
+#unlocks .finishers .qty {
+    font-size: 20px;
+    vertical-align: middle
+}
+
+#unlocks .finishers .qty.perm {
+    font-size: 32px
+}
+
+#unlocks .titles>div {
+    padding: 0 10px 5px
+}
+
+#unlocks .titles>div:hover {
+    background: rgba(0, 0, 0, .1)
+}
+
+#unlocks .titles h4 {
+    padding-bottom: 0
+}
+
+#guilds div {
+    text-align: center
+}
+
+#guilds img {
+    width: 128px;
+    height: 128px
+}
+
+.refreshTrades {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: -3px
+}
+
+.refreshTrades i {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+}
+
+.refreshTrades.spin i {
+    -webkit-animation: b 1s 1;
+    animation: b 1s 1
+}
+
+#keySubmit {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: -5px
+}
+
+#keySubmit i {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+}
+
+#keySubmit.shift i {
+    -webkit-animation: c 1s 1;
+    animation: c 1s 1
+}
+
+.buys, .sells {
+    position: relative;
+    width: 49%
+}
+
+.buys h4, .sells h4 {
+    border-bottom: 1px solid #33b5e5;
+    margin-bottom: 5px
+}
+
+.table-overflow {
+    overflow-x: auto
+}
+
+.paging {
+    position: absolute;
+    top: 6px;
+    right: 10px;
+    font-size: 20px
+}
+
+.paging a {
+    font-weight: 700;
+    display: inline-block;
+    vertical-align: middle
+}
+
+.empty .paging {
+    display: none
+}
+
+.achievement-categories {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    position: relative
+}
+
+.achievement-categories select {
+    font-size: 18px;
+    font-family: Roboto Condensed, sans-serif;
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    color: #33b5e5;
+    margin: 5px 10px
+}
+
+.achievement-categories a {
+    display: none
+}
+
+.achievement-categories a .expanded {
+    display: block
+}
+
+.achievement-categories a .collapsed, .achievement-categories a.collapsed .expanded {
+    display: none
+}
+
+.achievement-categories a.collapsed .collapsed {
+    display: block
+}
+
+.achievement-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -5px
+}
+
+.achievement-container>div {
+    display: flex;
+    flex: 1 1 400px;
+    border: 1px solid #666;
+    margin: 5px;
+    position: relative
+}
+
+.achievement-container>div.done {
+    background: #fff
+}
+
+.achievement-container .progress {
+    padding: 10px;
+    text-align: center
+}
+
+.achievement-container .progress img {
+    display: block;
+    margin: 0 auto
+}
+
+.achievement-container .progress p {
+    padding-top: 0
+}
+
+.achievement-container .details {
+    padding: 10px
+}
+
+.achievement-container .details h4 {
+    padding: 0
+}
+
+.achievement-container .rewards {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px -5px
+}
+
+.achievement-container .rewards .reward {
+    margin: 5px 10px
+}
+
+.achievement-container.collapsed>div {
+    align-items: center
+}
+
+.achievement-container.collapsed .description, .achievement-container.collapsed .requirement {
+    display: none
+}
+
+.achievement-container.collapsed .progress img {
+    width: 32px;
+    height: 32px
+}
+
+.achievement-container.collapsed .amount-done, .achievement-container.collapsed .rewards, .achievement-container.collapsed .tiers-done {
+    display: none
+}
+
+.reward:not(.coins) img {
+    width: 22px;
+    height: 22px;
+    vertical-align: middle;
+    margin-top: -2px
+}
+
+.coins {
+    text-shadow: -1px 0 1px #000, 1px 0 1px #000, 0 1px 1px #000, 0 -1px 1px #000
+}
+
+.coins img {
+    vertical-align: middle;
+    margin-top: -1px;
+    margin-left: 2px;
+    width: 10px
+}
+
+#loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 32px;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+    opacity: 0;
+    -webkit-animation: a 1s infinite;
+    animation: a 1s infinite;
+    -webkit-transform-origin: 50% 54%;
+    transform-origin: 50% 54%;
+    transition: opacity .5s ease-out
+}
+
+#loader.visible {
+    opacity: 1
+}
+
+body>aside, body>h2 {
+    opacity: 0;
+    transition: opacity .5s ease-out
+}
+
+body>aside.visible, body>h2.visible {
+    opacity: 1
+}
+
+@-webkit-keyframes a {
+    0% {
+        -webkit-transform: translate3d(-50%, -50%, 0) rotate(0deg)
+    }
+
+    to {
+        -webkit-transform: translate3d(-50%, -50%, 0) rotate(1turn)
+    }
+}
+
+@keyframes a {
+    0% {
+        transform: translate3d(-50%, -50%, 0) rotate(0deg)
+    }
+
+    to {
+        transform: translate3d(-50%, -50%, 0) rotate(1turn)
+    }
+}
+
+@-webkit-keyframes b {
+    0% {
+        -webkit-transform: translateZ(0) rotate(0deg)
+    }
+
+    to {
+        -webkit-transform: translateZ(0) rotate(1turn)
+    }
+}
+
+@keyframes b {
+    0% {
+        transform: translateZ(0) rotate(0deg)
+    }
+
+    to {
+        transform: translateZ(0) rotate(1turn)
+    }
+}
+
+@-webkit-keyframes c {
+    0% {
+        -webkit-transform: translateZ(0)
+    }
+
+    50% {
+        -webkit-transform: translate3d(8px, 0, 0)
+    }
+
+    to {
+        -webkit-transform: translateZ(0)
+    }
+}
+
+@keyframes c {
+    0% {
+        transform: translateZ(0)
+    }
+
+    50% {
+        transform: translate3d(8px, 0, 0)
+    }
+
+    to {
+        transform: translateZ(0)
+    }
+}
+
+#currentTransactions>p, #transactionHistory>p {
+    text-align: center
+}
+
+#currentTransactions .table-overflow p, #transactionHistory .table-overflow p {
+    display: none
+}
+
+#apiKey {
+    width: 220px;
+    padding: 3px;
+    margin: 5px 0
+}
+
+p.error {
+    color: #f44;
+    text-align: center
+}
+
+#characters .subtabs p.error {
+    text-align: left
+}
+
+#apiKey.error {
+    border: 1px solid #f44
+}
+
+#apiKey.success {
+    border: 1px solid #9c0
+}
+
+#apiKey~p.error {
+    display: none;
+    color: #f44
+}
+
+#apiKey.error~p.error {
+    display: block
+}
+
+@media (max-width:767px) {
+    .flex-container {
+        flex-wrap: wrap;
+        justify-content: space-between
+    }
+
+    .flex-container>div {
+        margin-right: 0;
+        width: 49%
+    }
+
+    .flex-container>div.char-info {
+        width: 100%
+    }
+
+    .flex-container>div:nth-child(odd) {
+        margin-right: 2%
+    }
+
+    .flex-container>div.buys, .flex-container>div.sells {
+        width: 100%
+    }
+
+    .stats>.flex-container>div {
+        width: 100%;
+        margin-right: 0
+    }
+
+    .stats .stat-breakdown {
+        max-width: none
+    }
+
+    .stat-breakdown .flex-container>div, .stat-summary .flex-container>div {
+        width: auto
+    }
+
+    .buys {
+        margin-bottom: 20px
+    }
+
+    .char-details .details {
+        width: 100%;
+        position: static
+    }
+
+    .char-details .subtabs {
+        margin-left: 0
+    }
+
+    #itemDetails:not(.skin):not(.trait) {
+        top: 65px !important;
+        left: 10px !important;
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+        max-width: none
+    }
+
+    #itemDetails.above {
+        z-index: 1
+    }
+
+    #itemDetails:not(.skin):not(.trait) .close {
+        opacity: 1
+    }
+
+    #itemDetails:not(.skin):not(.trait) .link {
+        display: block
+    }
+
+    #traitDetails {
+        top: 65px !important;
+        left: 10px !important;
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+        max-width: none;
+        overflow: auto
+    }
+
+    #traitDetails .close {
+        opacity: 1
+    }
+
+    #traitDetails .details {
+        max-width: 245px;
+        width: auto
+    }
+
+    #traitDetails .recharge {
+        width: auto;
+        right: 25px
+    }
+
+    #characters .total-values {
+        float: none;
+        margin-top: 10px
+    }
+
+    #skillDetails {
+        position: static;
+        width: 100%;
+        background: none
+    }
+
+    #skillDetails small {
+        display: none
+    }
+
+    .skill-details {
+        padding: 0;
+        margin: 10px 0;
+        display: block;
+        border-top: 1px solid #fff;
+        padding-top: 10px
+    }
+
+    body>aside {
+        position: fixed;
+        overflow: auto;
+        background: #f8f8f8;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        margin: 0;
+        width: 300px;
+        z-index: 10;
+        text-align: left;
+        transition: transform .3s ease-out;
+        -webkit-transform: translate3d(-120%, 0, 0);
+        transform: translate3d(-120%, 0, 0);
+        opacity: 1;
+        box-shadow: 0 15px 24px rgba(0, 0, 0, .22), 0 19px 76px rgba(0, 0, 0, .3)
+    }
+
+    body>aside.open {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+
+    body>aside>nav>a {
+        display: block;
+        text-align: left;
+        padding-left: 14px;
+        color: #303030;
+        padding: 10px 10px 8px 14px
+    }
+
+    body>aside>nav>a.selected, body>aside>nav>a:hover {
+        border-bottom: 2px solid transparent
+    }
+
+    body>aside>nav>a.selected {
+        background: #eee;
+        color: #33b5e5
+    }
+
+    body>aside>nav a i {
+        margin-right: 6px
+    }
+
+    body>aside .of {
+        display: none
+    }
+
+    body>aside h2 {
+        text-align: left;
+        padding: 45px 12px 10px;
+        background: #33b5e5 url(../img/menu-bg.jpg);
+        background-size: 100%;
+        color: #000;
+        border-bottom: 0
+    }
+
+    body>aside h2 a {
+        display: block;
+        color: #f8f8f8
+    }
+
+    body>aside h2 a:hover {
+        color: #f8f8f8
+    }
+
+    #worldName {
+        margin-left: 0
+    }
+
+    .standings>div {
+        padding: 10px 0
+    }
+
+    .tier {
+        margin-left: 5px
+    }
+
+    #hideMenu, #showMenu {
+        display: block
+    }
+
+    #hideMenu {
+        color: #f8f8f8
+    }
+
+    #showMenu {
+        opacity: 0;
+        z-index: -1
+    }
+
+    #showMenu.visible {
+        opacity: 1;
+        z-index: 1
+    }
+
+    .achievement-categories {
+        text-align: left
+    }
+
+    .achievement-categories a {
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        bottom: 0
+    }
+
+    .achievement-categories select {
+        display: block;
+        margin: 5px 10px 5px -4px
+    }
+
+    .build-skill:hover .skill-details {
+        position: fixed;
+        top: 30px;
+        left: 30px;
+        right: 30px;
+        bottom: 30px;
+        z-index: 2;
+        width: auto;
+        overflow-y: auto
+    }
+}
+
+@media (max-width:616px) {
+    #pvp .map-img {
+        width: 100%;
+        display: block;
+        max-width: 316px
+    }
+
+    #pvp .games>div:nth-child(2n) .map-img, #pvp .map-img {
+        float: none;
+        margin: 0 auto
+    }
+
+    .games div {
+        text-align: center;
+        margin: 0 auto
+    }
+
+    .games div.flex-container>div {
+        text-align: left
+    }
+
+    .games div.flex-container>div.game-score {
+        text-align: right
+    }
+
+    .games .flex-container {
+        max-width: 316px
+    }
+
+    #pvp .games h4 {
+        padding-top: 5px
+    }
+
+    #pvp .games h6 {
+        text-align: left;
+        max-width: 316px;
+        margin: 0 auto 5px
+    }
+
+    #pvp .games h6 span {
+        margin-right: 0
+    }
+}
+
+@media (max-width:475px) {
+    .total-values {
+        text-align: left;
+        width: 100%
+    }
+
+    .total-values i {
+        position: absolute;
+        top: 5px;
+        right: 5px
+    }
+
+    .total-vendor:after {
+        content: "\A";
+        white-space: pre
+    }
+}
+
+@media (max-width:359px) {
+    body {
+        padding-top: 52px
+    }
+
+    h1 {
+        font-size: 26px
+    }
+
+    #hideMenu, #showMenu, #showSettings {
+        top: 10px
+    }
+}

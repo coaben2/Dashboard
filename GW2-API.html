@@ -1,0 +1,223 @@
+<html lang="Fr">
+
+<head>
+	<meta charset="utf-8">
+	<title>GW2 Account Viewer</title>
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=0, maximum-scale=1.0, width=device-width">
+
+	<link rel="stylesheet" href="stylesGW2.css">
+
+	<link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:400italic,700italic,400,700" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="screen-2a64d7d7b5.min.css">
+</head>
+
+<body>
+	<header>
+		<a href="#" id="showMenu"><i class="material-icons">menu</i></a>
+		<h1>GW<img src="assets/social/gw2-logo.png" alt="2"> Account Viewer</h1>
+		<a href="#" id="showSettings"><i class="material-icons">settings</i></a>
+	</header>
+
+	<div id="settings" class="visible">
+		<label for="api-key">API Key:</label>
+		<input id="apiKey" name="api-key" type="text" placeholder="Enter API key with full permissions."> <a href="#"
+			id="keySubmit"><i class="material-icons">arrow_forward</i></a>
+		<p class="error">si la clé API ne marche pas</p>
+		<p class="link">
+			<a href="https://account.arena.net/applications" target="_blank" class="btn"><i class="material-icons">avoir
+					une clé API</a>
+		</p>
+	</div>
+
+	<div class="intro">
+		<p>
+			This website allows you to view your account details, characters, inventories, equipment,
+			bank, material storage, and trading post transactions in real-time, with more to come in the future, using
+			the offical Guild Wars 2 API.
+			Simply provide an API key with all permissions generated on the Guild Wars 2 website to get started!
+		</p>
+	</div>
+
+	<div id="traitDetails">
+		<a href="#" class="close"><i class="material-icons">clear</i></a>
+		<div class="trait-name"></div>
+		<div class="description"></div>
+		<div class="skills"></div>
+		<div class="facts"></div>
+		<div id="skillDetails"></div>
+	</div>
+
+	<div id="itemDetails">
+		<a href="#" class="close"><i class="material-icons">clear</i></a>
+		<div class="icon-name">
+			<img src="assets/social/gw2-logo.png">
+			<strong class="item-name"></strong>
+		</div>
+		<div class="Weapon">
+			Weapon Strength: <span class="min"></span> - <span class="max"></span>
+		</div>
+		<div class="Armor">
+			Defense: <span class="defense"></span>
+		</div>
+		<div class="stats">
+			<span class="stat1"></span>
+			<span class="stat2"></span>
+			<span class="stat3"></span>
+			<span class="stat4"></span>
+			<span class="stat5"></span>
+			<span class="stat6"></span>
+			<span class="stat7"></span>
+		</div>
+		<div class="upgrades"></div>
+		<div class="infusions"></div>
+		<div class="transmuted">
+			Transmuted<br>
+			<span class="original-item"></span>
+		</div>
+		<div class="rarity"></div>
+		<div class="type"></div>
+		<div class="bonuses">
+			<span class="bonus1"></span>
+			<span class="bonus2"></span>
+			<span class="bonus3"></span>
+			<span class="bonus4"></span>
+			<span class="bonus5"></span>
+			<span class="bonus6"></span>
+		</div>
+		<div class="buff"></div>
+		<div class="level-box">
+			Required Level: <span class="level"></span>
+		</div>
+		<div class="description"></div>
+		<div class="values">
+			<div class="vendor">Vendor: <span></span></div>
+			<div class="tp-buy">TP Buy: <span></span></div>
+			<div class="tp-sell">TP Sell: <span></span></div>
+		</div>
+		<div class="link">
+			<a href="#" target="_blank"></a>
+		</div>
+	</div>
+
+	<img id="loader" src="assets/social/home-icon.png" alt="Loading...">
+
+	<aside id="mainMenu">
+		<h2>
+			<span id="accountName"></span>
+			<a href="#" id="worldName" target="_blank"></a>
+		</h2>
+
+		<nav id="mainNav">
+			<a href="#" id="hideMenu"><i class="material-icons">arrow_back</i></a>
+			<a href="#" data-id="characters"><i class="material-icons">people</i> Characters</a>
+			<a href="#" data-id="bank"><i class="material-icons">local_atm</i> Bank</a>
+			<a href="#" data-id="collectibles"><i class="material-icons">archive</i> Collectibles</a>
+			<a href="#" data-id="wallet"><i class="material-icons">account_balance_wallet</i> Wallet</a>
+			<a href="#" data-id="unlocks"><i class="material-icons">lock_open</i> Unlocks</a>
+			<a href="#" data-id="tradingPost"><i class="material-icons">compare_arrows</i> Trading Post</a>
+			<a href="#" data-id="pvp"><i class="material-icons">whatshot</i> PvP</a>
+			<a href="#" data-id="achievements"><i class="material-icons">star</i> Achievements</a>
+			<a href="#" data-id="guilds"><i class="material-icons">group_work</i> Guilds</a>
+		</nav>
+	</aside>
+
+	<div id="tabContainer">
+
+		<section id="characters">
+			<h3>Characters</h3>
+			<div class="char-list-wrap">
+				<select id="charList"></select>
+				<div class="total-values">
+					Vendor: <span class="total-vendor"></span>
+					TP: <span class="total-buy"></span> -
+					<span class="total-sell"></span>
+					<i class="material-icons">info_outline</i>
+					<p class="info">
+						Liquid assets.
+						<br><br>
+						TP values include all items that are not Account Bound or Soul Bound.
+						<br><br>
+						Upgrade values within items (runes/sigils) are included only if the item is Bound and
+						Salvagable.
+					</p>
+				</div>
+			</div>
+			<div class="char-details"></div>
+		</section>
+
+		<section id="bank">
+			<h3>Bank</h3>
+			<div class="total-values">
+				Vendor: <span class="total-vendor"></span>
+				TP: <span class="total-buy"></span> -
+				<span class="total-sell"></span>
+				<i class="material-icons">info_outline</i>
+				<p class="info">
+					Liquid assets.
+					<br><br>
+					TP values include all items that are not Account Bound or Soul Bound.
+					<br><br>
+					Upgrade values within items (runes/sigils) are included only if the item is Bound and Salvagable.
+				</p>
+			</div>
+			<div class="item-list"></div>
+		</section>
+
+		<section id="collectibles">
+			<h3>Collectibles</h3>
+			<span class="total-values">
+				Vendor: <span class="total-vendor"></span>
+				TP: <span class="total-buy"></span> -
+				<span class="total-sell"></span>
+			</span>
+			<div class="item-list"></div>
+		</section>
+
+		<section id="wallet">
+			<h3>Wallet</h3>
+			<div class="wallet-items"></div>
+		</section>
+
+		<section id="unlocks">
+			<h3>Unlocks</h3>
+			<div class="subtabs">
+				<nav>
+					<a href="#" data-class="skins" class="selected">Skins</a>
+					<a href="#" data-class="dyes">Dyes</a>
+					<a href="#" data-class="minis">Minis</a>
+					<a href="#" data-class="finishers">Finishers</a>
+					<a href="#" data-class="titles">Titles</a>
+				</nav>
+				<div class="skins visible"></div>
+				<div class="dyes collapsed"></div>
+				<div class="minis collapsed"></div>
+				<div class="finishers collapsed"></div>
+				<div class="titles collapsed"></div>
+		</section>
+
+		<section id="achievements">
+			<h3>Achievements</h3>
+
+			<div class="achievement-categories">
+				<select id="achievementGroups"></select>
+				<select id="achievementCategories"></select>
+				<a href="#" class="jq-collapse-achievements"><i
+						class="material-icons expanded">remove_circle_outline</i><i
+						class="material-icons collapsed">add_circle_outline</i></a>
+			</div>
+
+			<div class="achievement-container"></div>
+		</section>
+
+		<section id="guilds">
+			<h3>Guilds</h3>
+			<div class="flex-container"></div>
+		</section>
+	</div>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="Scripts/main-0f7819b9df.min.js"></script>
+</body>
+
+</html>
