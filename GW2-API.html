@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="utf-8">
-    <title>GW2 Account Viewer</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=0, maximum-scale=1.0, width=device-width">
 
     <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:400italic,700italic,400,700" rel="stylesheet" type="text/css">
@@ -16,11 +15,10 @@
     <link rel="shortcut icon" href="assets/social/gw2-logo.png">
     <link rel="apple-touch-icon-precomposed" href="assets/social/gw2-logo.png">
 </head>
-
 <body>
     <header>
         <a href="#" id="showMenu"><i class="material-icons">menu</i></a>
-        <h1>GW<img src="assets/social/gw2-logo.png" alt="2"> Account Viewer</h1>
+        <h1>compte GW<img src="assets/social/gw2-logo.png" alt="2"></h1>
         <a href="#" id="showSettings"><i class="material-icons">settings</i></a>
     </header>
 
@@ -32,14 +30,12 @@
             <a href="https://account.arena.net/applications" target="_blank" class="btn"><i class="material-icons">API</a>
         </p>
     </div>
-
     <div class="intro">
         <p>
             This website allows you to view your account details, characters, inventories, equipment, bank, material storage, and trading post transactions in real-time, with more to come in the future, using the offical Guild Wars 2 API. Simply provide an API key
             with all permissions generated on the Guild Wars 2 website to get started!
         </p>
     </div>
-
     <div id="traitDetails">
         <a href="#" class="close"><i class="material-icons">clear</i></a>
         <div class="trait-name"></div>
@@ -48,7 +44,6 @@
         <div class="facts"></div>
         <div id="skillDetails"></div>
     </div>
-
     <div id="itemDetails">
         <a href="#" class="close"><i class="material-icons">clear</i></a>
         <div class="icon-name">
@@ -100,15 +95,12 @@
             <a href="#" target="_blank"></a>
         </div>
     </div>
-
     <img id="loader" src="assets/social/home-icon.png" alt="Loading...">
-
     <aside id="mainMenu">
         <h2>
             <span id="accountName"></span>
             <a href="#" id="worldName" target="_blank"></a>
         </h2>
-
         <nav id="mainNav">
             <a href="#" id="hideMenu"><i class="material-icons">arrow_back</i></a>
             <a href="#" data-id="characters"><i class="material-icons">people</i> personage</a>
@@ -122,7 +114,6 @@
             <a href="#" data-id="guilds"><i class="material-icons">group_work</i> Guilde</a>
         </nav>
     </aside>
-
     <div id="tabContainer">
 
         <section id="characters">
@@ -142,7 +133,6 @@
             </div>
             <div class="char-details"></div>
         </section>
-
         <section id="bank">
             <h3>Bank</h3>
             <div class="total-values">
@@ -157,7 +147,6 @@
             </div>
             <div class="item-list"></div>
         </section>
-
         <section id="collectibles">
             <h3>Collectibles</h3>
             <span class="total-values">
@@ -166,12 +155,10 @@
             </span>
             <div class="item-list"></div>
         </section>
-
         <section id="wallet">
             <h3>Wallet</h3>
             <div class="wallet-items"></div>
         </section>
-
         <section id="unlocks">
             <h3>Unlocks</h3>
             <div class="subtabs">
@@ -188,7 +175,6 @@
                 <div class="finishers collapsed"></div>
                 <div class="titles collapsed"></div>
         </section>
-
         <section id="achievements">
             <h3>Achievements</h3>
 
@@ -202,7 +188,6 @@
 
             <div class="achievement-container"></div>
         </section>
-
         <section id="guilds">
             <h3>Guilds</h3>
             <div class="flex-container"></div>
@@ -211,5 +196,4 @@
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="Scripts/main-0f7819b9df.min.js"></script>
 </body>
-
 </html>

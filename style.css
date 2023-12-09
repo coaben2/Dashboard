@@ -52,7 +52,7 @@ header {
   }
   
   main {
-    margin-top: 100px;
+    margin-top: 10px;
   }
   nav ul {
     list-style: none;
@@ -234,7 +234,7 @@ header {
     width: auto;
     height: auto;
     position: fixed;
-    top: 50px;
+    top: 40px;
     left: 0;
     background-color: #333;
     overflow-y: auto;

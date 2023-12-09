@@ -1,53 +1,54 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <title>Accueil</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
+<head>
+  <title>Accueil</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-  <body>
-    <header>
-      <nav>
-        <ul>
-          <li><button onclick="window.location.href='index.html'" id="index-link">Accueil</button></li>
-          <li><button onclick="window.location.href='lexiqueguildwars2.html'" id="guildwars2">guild wars 2</button></li>
-          <li><button onclick="window.location.href='blog.html'" id="blog-link">Blog</button></li>
-          <li><button onclick="window.location.href='portfolio.html'" id="portfolio-link">Portfolio</button></li>
-        </ul>
-      </nav>
-    </header>
-    <aside id="sidebar">
-      <div class="titles-container">
-        <button onclick="loadContent('GW2-API.html')">API</button>
-        <button onclick="loadContent('GW2-lexique.html')">lexique</button>
-      </div>
-    </aside>
-
-    <main>
-      <iframe id="content-frame" src="GW2-lexique.html"></iframe>
-    </main>
-
-    <footer>
+<body>
+  <header>
+    <nav>
       <ul>
-        <li><a href="https://www.youtube.com/@coaben" target="_blank"><img src="assets\social\youtube.png"
-              alt="YouTube"></a></li>
-        <li><a href="https://www.instagram.com/coaben2" target="_blank"><img src="assets\social\instagram.png"
-              alt="Instagram"></a></li>
-        <li><a href="https://www.twitch.tv/coaben" target="_blank"><img src="assets\social\tic.png" alt="Twitch"></a>
-        </li>
-        <li><a href="https://coaben.blogspot.com/" target="_blank"><img src="assets\social\blogger.png"
-              alt="blogger"></a></li>
+        <li><button onclick="window.location.href='index.html'" id="index-link">Accueil</button></li>
+        <li><button onclick="window.location.href='lexiqueguildwars2.html'" id="guildwars2">guild wars 2</button></li>
+        <li><button onclick="window.location.href='blog.html'" id="blog-link">Blog</button></li>
+        <li><button onclick="window.location.href='portfolio.html'" id="portfolio-link">Portfolio</button></li>
       </ul>
-    </footer>
-  </body>
+    </nav>
+  </header>
+  <aside id="sidebar">
+    <div class="titles-container">
+      <button onclick="loadContent('GW2-lexique.html')">lexique</button>
+      <button onclick="loadContent('GW2-API.html')">API</button>
+      <button onclick="loadContent('GW2-sac.html')">vide ton sac</button>
+    </div>
+  </aside>
 
-  <script>
-    
-    function loadContent(contentUrl) {
-        const iframe = document.getElementById('content-frame');
-        iframe.src = contentUrl;
-    }
-  </script>
-  
+  <main>
+    <iframe id="content-frame" src="GW2-lexique.html"></iframe>
+  </main>
+
+  <footer>
+    <ul>
+      <li><a href="https://www.youtube.com/@coaben" target="_blank"><img src="assets\social\youtube.png"
+            alt="YouTube"></a></li>
+      <li><a href="https://www.instagram.com/coaben2" target="_blank"><img src="assets\social\instagram.png"
+            alt="Instagram"></a></li>
+      <li><a href="https://www.twitch.tv/coaben" target="_blank"><img src="assets\social\tic.png" alt="Twitch"></a>
+      </li>
+      <li><a href="https://coaben.blogspot.com/" target="_blank"><img src="assets\social\blogger.png" alt="blogger"></a>
+      </li>
+    </ul>
+  </footer>
+</body>
+
+<script>
+
+  function loadContent(contentUrl) {
+    const iframe = document.getElementById('content-frame');
+    iframe.src = contentUrl;
+  }
+</script>
+
 </html>

@@ -1,0 +1,80 @@
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:400italic,700italic,400,700" rel="stylesheet"
+        type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic"
+        rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="screen-2a64d7d7b5.min.css">
+
+    <script src="Scripts/main-0f7819b9df.min.js"></script>
+
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <a href="#" id="showMenu"><i class="material-icons">menu</i></a>
+        <h1>compte GW<img src="assets/social/gw2-logo.png" alt="2"></h1>
+        <a href="#" id="showSettings"><i class="material-icons">settings</i></a>
+    </header>
+
+    <div id="settings" class="visible">
+        <label for="api-key">API Key:</label>
+        <input id="apiKey" name="api-key" type="text" placeholder="Enter API key with full permissions."> <a href="#"
+            id="keySubmit"><i class="material-icons">arrow_forward</i></a>
+        <p class="error">si la clé API ne marche pas</p>
+        <p class="link">
+            <a href="https://account.arena.net/applications" target="_blank" class="btn"><i
+                    class="material-icons">API</a>
+        </p>
+    </div>
+
+    <div id="container">
+        <a href="https://gw.zweistein.cz/gw2stacks/" target="_blank">site englais de référence</a>
+        <h1>GW2 comment vider son inventaire!</h1>
+
+        <h2 id="tips_label">Conseils divers :</h2>
+        <p>Voici divers conseils sur la façon de faire de la place dans votre inventaire.</p>
+        <table id="tips">
+            <tbody>
+                <tr>
+                    <td class="cost">En construction...</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 id="items_label">Empilez les objets suivants :</h2>
+        <p>
+            Ces objets ont des piles incomplètes (moins de 250 objets) à plusieurs endroits et
+            doivent être empilés ensemble pour économiser de l’espace dans l’inventaire.
+        </p>
+        <table id="items">
+            <tbody>
+                <tr>
+                    <td class="cost">En construction...</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 id="crafts_label">Craft :</h2>
+        <p>
+            Vous avez plus d’une pile (250 articles) d’ingrédients pour les articles suivants.
+            Vous pouvez fabriquer ces objets pour réduire le nombre de piles.
+        </p>
+        <table id="crafts">
+            <tbody>
+                <tr>
+                    <td class="cost">En construction...</td>
+                </tr>
+            </tbody>
+        </table> 
+    </div>
+    </div>
+
+</html>
