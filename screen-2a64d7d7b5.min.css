@@ -1,29 +1,124 @@
-a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
     margin: 0;
     padding: 0;
     border: 0;
     font-size: 100%;
-    font: inherit;
+    font: small-caption;
     vertical-align: baseline
 }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
     display: block
 }
 
 body {
-    line-height: 1
+    line-height: 1;
 }
 
-ol, ul {
+ol,
+ul {
     list-style: none
 }
 
-blockquote, q {
+blockquote,
+q {
     quotes: none
 }
 
-blockquote:after, blockquote:before, q:after, q:before {
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
     content: "";
     content: none
 }
@@ -35,25 +130,24 @@ table {
 
 * {
     box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box
+    -webkit-box-sizing: border-box;
 }
 
 html {
-    height: 100%
+    height: auto;
 }
 
 body {
-    line-height: 140%;
+    line-height: 100%;
     font-family: Roboto, sans-serif;
     font-size: 14px;
-    background: #f9f9f9 url(../img/handmadepaper.png);
+    background: #f9f9f9 url(assets/social/handmadepaper.png);
     min-width: 320px;
     margin: 0 auto;
     padding: 60px 20px 30px;
     position: relative;
     min-height: 100%;
-    color: #303030
+    color: #303030;
 }
 
 body>div {
@@ -87,9 +181,14 @@ footer form input:hover {
     text-decoration: underline
 }
 
-h1, h2, h3, h4, h5, h6 {
-    line-height: 140%;
-    font-family: Roboto Condensed, sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 100%;
+    font-family: sans-serif;
     padding: 5px 0
 }
 
@@ -145,7 +244,10 @@ header {
     z-index: 2
 }
 
-footer, h2, h3, header {
+footer,
+h2,
+h3,
+header {
     text-align: center
 }
 
@@ -158,10 +260,11 @@ footer, h2, h3, header {
 a {
     text-decoration: none;
     color: #33b5e5;
-    transition: all .2s ease-out
+    transition: all .2s ease-out;
 }
 
-a:active, a:hover {
+a:active,
+a:hover {
     color: #09c;
     text-decoration: underline
 }
@@ -187,7 +290,8 @@ a:active, a:hover {
     color: #303030
 }
 
-.Legendary, .Legendary a {
+.Legendary,
+.Legendary a {
     color: #93c
 }
 
@@ -195,7 +299,8 @@ a:active, a:hover {
     border: 1px solid #93c
 }
 
-.Ascended, .Ascended a {
+.Ascended,
+.Ascended a {
     color: #f48
 }
 
@@ -203,7 +308,8 @@ a:active, a:hover {
     border: 1px solid #f48
 }
 
-.Exotic, .Exotic a {
+.Exotic,
+.Exotic a {
     color: #fda500
 }
 
@@ -211,7 +317,8 @@ a:active, a:hover {
     border: 1px solid #fda500
 }
 
-.Rare, .Rare a {
+.Rare,
+.Rare a {
     color: #ff0
 }
 
@@ -219,7 +326,8 @@ a:active, a:hover {
     border: 1px solid #ff0
 }
 
-.Masterwork, .Masterwork a {
+.Masterwork,
+.Masterwork a {
     color: #3c1
 }
 
@@ -227,7 +335,8 @@ a:active, a:hover {
     border: 1px solid #3c1
 }
 
-.Fine, .Fine a {
+.Fine,
+.Fine a {
     color: #4f9dfe
 }
 
@@ -235,11 +344,14 @@ a:active, a:hover {
     border: 1px solid #4f9dfe
 }
 
-.Basic, .Basic a {
+.Basic,
+.Basic a {
     color: #f8f8f8
 }
 
-.item.Basic img, .item.Junk img, .item img {
+.item.Basic img,
+.item.Junk img,
+.item img {
     border: 1px solid #000
 }
 
@@ -253,7 +365,7 @@ a:active, a:hover {
 
 body>aside>nav {
     text-align: center;
-    font-family: Roboto Condensed, sans-serif;
+    font-family: sans-serif;
     font-size: 18px;
     padding: 10px 0
 }
@@ -264,7 +376,8 @@ body>aside>nav a {
     border-bottom: 2px solid transparent
 }
 
-body>aside>nav a.selected, body>aside>nav a:hover {
+body>aside>nav a.selected,
+body>aside>nav a:hover {
     text-decoration: none;
     border-bottom: 2px solid;
     color: #09c
@@ -346,8 +459,8 @@ em {
 }
 
 .flex-container>* {
-    margin-right: 2%;
-    margin-bottom: 10px
+    margin-right: 5px;
+    margin-bottom: 5px;
 }
 
 .flex-container>:last-child {
@@ -419,7 +532,8 @@ td a {
     font-weight: 500
 }
 
-td a, td span {
+td a,
+td span {
     text-shadow: -1px 0 1px #000, 1px 0 1px #000, 0 1px 1px #000, 0 -1px 1px #000
 }
 
@@ -434,7 +548,8 @@ td a, td span {
     right: 10px
 }
 
-#hideMenu, #showMenu {
+#hideMenu,
+#showMenu {
     position: absolute;
     top: 15px;
     left: 10px;
@@ -501,12 +616,14 @@ td a, td span {
     padding: 5px 0
 }
 
-#traitDetails .facts, #traitDetails .skills {
+#traitDetails .facts,
+#traitDetails .skills {
     font-size: 12px;
     line-height: 14px
 }
 
-#traitDetails .facts>div, #traitDetails .skills>div {
+#traitDetails .facts>div,
+#traitDetails .skills>div {
     padding: 3px 0
 }
 
@@ -627,26 +744,37 @@ td a, td span {
     line-height: 28px
 }
 
-#itemDetails.skin .icon-name img, #itemDetails.trait .icon-name img {
+#itemDetails.skin .icon-name img,
+#itemDetails.trait .icon-name img {
     display: none
 }
 
-#itemDetails .close, #traitDetails .close {
+#itemDetails .close,
+#traitDetails .close {
     position: absolute;
     right: 5px;
     top: 5px;
     opacity: 0
 }
 
-#itemDetails .max, #itemDetails .min, #itemDetails .stats {
+#itemDetails .max,
+#itemDetails .min,
+#itemDetails .stats {
     color: #9c0
 }
 
-#itemDetails .bonuses, #itemDetails .buff, #itemDetails .infusions, #itemDetails .upgrades {
+#itemDetails .bonuses,
+#itemDetails .buff,
+#itemDetails .infusions,
+#itemDetails .upgrades {
     color: #33b5e5
 }
 
-#itemDetails .bonuses, #itemDetails .infusions, #itemDetails .rarity, #itemDetails .transmuted, #itemDetails .upgrades {
+#itemDetails .bonuses,
+#itemDetails .infusions,
+#itemDetails .rarity,
+#itemDetails .transmuted,
+#itemDetails .upgrades {
     margin-top: 10px
 }
 
@@ -661,13 +789,15 @@ td a, td span {
     vertical-align: middle
 }
 
-#itemDetails .infusions img, #itemDetails .upgrades img {
+#itemDetails .infusions img,
+#itemDetails .upgrades img {
     width: 24px;
     height: 24px;
     vertical-align: middle
 }
 
-#itemDetails .bonuses span, #itemDetails .stats span {
+#itemDetails .bonuses span,
+#itemDetails .stats span {
     display: block
 }
 
@@ -707,7 +837,8 @@ td a, td span {
     transform: scale(.8)
 }
 
-#characters ul a.selected, #characters ul a:hover {
+#characters ul a.selected,
+#characters ul a:hover {
     color: #09c;
     text-decoration: none;
     -webkit-transform: scale(1);
@@ -723,7 +854,7 @@ td a, td span {
 
 #charList {
     font-size: 24px;
-    font-family: Roboto Condensed, sans-serif;
+    font-family: sans-serif;
     border: none;
     background: none;
     cursor: pointer;
@@ -778,7 +909,9 @@ td a, td span {
     border-bottom: 1px solid #33b5e5
 }
 
-.equipment h4, .subtabs nav, .subtabs nav a {
+.equipment h4,
+.subtabs nav,
+.subtabs nav a {
     margin-bottom: 10px
 }
 
@@ -787,7 +920,7 @@ td a, td span {
     margin-right: 10px;
     font-size: 20px;
     border-bottom: 2px solid transparent;
-    font-family: Roboto Condensed;
+    font-family: ;
     padding-bottom: 5px
 }
 
@@ -795,7 +928,8 @@ td a, td span {
     margin-right: 0
 }
 
-.subtabs nav a.selected, .subtabs nav a:hover {
+.subtabs nav a.selected,
+.subtabs nav a:hover {
     text-decoration: none;
     color: #09c;
     border-bottom: 2px solid #09c
@@ -851,7 +985,7 @@ td a, td span {
 }
 
 .equipment>.flex-container>div {
-    flex-grow: 1
+    flex-grow: 1;
 }
 
 .equipment .item {
@@ -891,7 +1025,8 @@ td a, td span {
     position: relative
 }
 
-.bag .item.empty, .bag a.item {
+.bag .item.empty,
+.bag a.item {
     display: inline-block;
     margin-right: 5px
 }
@@ -1128,7 +1263,8 @@ span.major.trait-9 {
     display: block
 }
 
-#pvp h3, #pvp nav {
+#pvp h3,
+#pvp nav {
     text-align: center
 }
 
@@ -1155,7 +1291,8 @@ span.major.trait-9 {
     font-size: 20px
 }
 
-#pvp .pvp-rank, #pvp .stat-summary {
+#pvp .pvp-rank,
+#pvp .stat-summary {
     margin-bottom: 10px
 }
 
@@ -1225,7 +1362,8 @@ span.major.trait-9 {
     width: 316px
 }
 
-#pvp .games .progress-bar, #pvp .progress-bar>div {
+#pvp .games .progress-bar,
+#pvp .progress-bar>div {
     display: inline-block;
     height: 5px
 }
@@ -1234,7 +1372,8 @@ span.major.trait-9 {
     background: #690
 }
 
-#pvp .progress-bar>div.losses, #pvp .progress-bar>div.red-score {
+#pvp .progress-bar>div.losses,
+#pvp .progress-bar>div.red-score {
     background: #c00
 }
 
@@ -1296,15 +1435,21 @@ span.major.trait-9 {
     color: red
 }
 
-.Bye, .Victory {
+.Bye,
+.Victory {
     color: #690
 }
 
-.Defeat, .Desertion, .Forfeit, .red-score, .Red-team {
+.Defeat,
+.Desertion,
+.Forfeit,
+.red-score,
+.Red-team {
     color: #c00
 }
 
-.blue-score, .Blue-team {
+.blue-score,
+.Blue-team {
     color: #09c
 }
 
@@ -1357,7 +1502,8 @@ span.major.trait-9 {
     margin-bottom: 0
 }
 
-.soloarenarated, .teamarenarated {
+.soloarenarated,
+.teamarenarated {
     opacity: .5
 }
 
@@ -1371,7 +1517,8 @@ span.major.trait-9 {
     padding: 10px 20px
 }
 
-.division, .standings>div {
+.division,
+.standings>div {
     text-align: center
 }
 
@@ -1390,7 +1537,8 @@ span.major.trait-9 {
     margin-top: 10px
 }
 
-.pips, .tier {
+.pips,
+.tier {
     display: flex
 }
 
@@ -1453,7 +1601,8 @@ span.major.trait-9 {
     left: -307px
 }
 
-#bank .item-list, #collectibles .item-list {
+#bank .item-list,
+#collectibles .item-list {
     max-width: 530px;
     margin: 0 auto
 }
@@ -1466,11 +1615,13 @@ span.major.trait-9 {
     height: 48px
 }
 
-#bank, #collectibles {
+#bank,
+#collectibles {
     text-align: center
 }
 
-#bank .item-list, #collectibles .item-list {
+#bank .item-list,
+#collectibles .item-list {
     text-align: left
 }
 
@@ -1478,11 +1629,14 @@ span.major.trait-9 {
     float: right
 }
 
-#bank .total-values, #collectibles .total-values {
+#bank .total-values,
+#collectibles .total-values {
     display: none
 }
 
-#bank .total-values.visible, #collectibles .total-values.visible, .total-values {
+#bank .total-values.visible,
+#collectibles .total-values.visible,
+.total-values {
     display: inline-block
 }
 
@@ -1605,7 +1759,8 @@ span.major.trait-9 {
     display: none
 }
 
-.wallet-items>div[data-id="1"] .quantity, .wallet-items>div[data-id="2"] .quantity {
+.wallet-items>div[data-id="1"] .quantity,
+.wallet-items>div[data-id="2"] .quantity {
     text-shadow: -1px 0 1px #000, 1px 0 1px #000, 0 1px 1px #000, 0 -1px 1px #000
 }
 
@@ -1632,7 +1787,8 @@ span.major.trait-9 {
     margin: 0 auto
 }
 
-#unlocks>div, #unlocks>div>div {
+#unlocks>div,
+#unlocks>div>div {
     max-width: 530px
 }
 
@@ -1642,7 +1798,8 @@ span.major.trait-9 {
     margin-bottom: 5px
 }
 
-#unlocks .dyes a, #unlocks .skins a img {
+#unlocks .dyes a,
+#unlocks .skins a img {
     width: 48px;
     height: 48px
 }
@@ -1755,12 +1912,14 @@ span.major.trait-9 {
     animation: c 1s 1
 }
 
-.buys, .sells {
+.buys,
+.sells {
     position: relative;
     width: 49%
 }
 
-.buys h4, .sells h4 {
+.buys h4,
+.sells h4 {
     border-bottom: 1px solid #33b5e5;
     margin-bottom: 5px
 }
@@ -1795,7 +1954,8 @@ span.major.trait-9 {
 
 .achievement-categories select {
     font-size: 18px;
-    font-family: Roboto Condensed, sans-serif;
+    font-family: sans-serif;
+    sans-serif;
     border: none;
     background: none;
     cursor: pointer;
@@ -1812,7 +1972,8 @@ span.major.trait-9 {
     display: block
 }
 
-.achievement-categories a .collapsed, .achievement-categories a.collapsed .expanded {
+.achievement-categories a .collapsed,
+.achievement-categories a.collapsed .expanded {
     display: none
 }
 
@@ -1874,7 +2035,8 @@ span.major.trait-9 {
     align-items: center
 }
 
-.achievement-container.collapsed .description, .achievement-container.collapsed .requirement {
+.achievement-container.collapsed .description,
+.achievement-container.collapsed .requirement {
     display: none
 }
 
@@ -1883,7 +2045,9 @@ span.major.trait-9 {
     height: 32px
 }
 
-.achievement-container.collapsed .amount-done, .achievement-container.collapsed .rewards, .achievement-container.collapsed .tiers-done {
+.achievement-container.collapsed .amount-done,
+.achievement-container.collapsed .rewards,
+.achievement-container.collapsed .tiers-done {
     display: none
 }
 
@@ -1924,12 +2088,14 @@ span.major.trait-9 {
     opacity: 1
 }
 
-body>aside, body>h2 {
+body>aside,
+body>h2 {
     opacity: 0;
     transition: opacity .5s ease-out
 }
 
-body>aside.visible, body>h2.visible {
+body>aside.visible,
+body>h2.visible {
     opacity: 1
 }
 
@@ -1937,7 +2103,6 @@ body>aside.visible, body>h2.visible {
     0% {
         -webkit-transform: translate3d(-50%, -50%, 0) rotate(0deg)
     }
-
     to {
         -webkit-transform: translate3d(-50%, -50%, 0) rotate(1turn)
     }
@@ -1947,7 +2112,6 @@ body>aside.visible, body>h2.visible {
     0% {
         transform: translate3d(-50%, -50%, 0) rotate(0deg)
     }
-
     to {
         transform: translate3d(-50%, -50%, 0) rotate(1turn)
     }
@@ -1957,7 +2121,6 @@ body>aside.visible, body>h2.visible {
     0% {
         -webkit-transform: translateZ(0) rotate(0deg)
     }
-
     to {
         -webkit-transform: translateZ(0) rotate(1turn)
     }
@@ -1967,7 +2130,6 @@ body>aside.visible, body>h2.visible {
     0% {
         transform: translateZ(0) rotate(0deg)
     }
-
     to {
         transform: translateZ(0) rotate(1turn)
     }
@@ -1977,11 +2139,9 @@ body>aside.visible, body>h2.visible {
     0% {
         -webkit-transform: translateZ(0)
     }
-
     50% {
         -webkit-transform: translate3d(8px, 0, 0)
     }
-
     to {
         -webkit-transform: translateZ(0)
     }
@@ -1991,21 +2151,21 @@ body>aside.visible, body>h2.visible {
     0% {
         transform: translateZ(0)
     }
-
     50% {
         transform: translate3d(8px, 0, 0)
     }
-
     to {
         transform: translateZ(0)
     }
 }
 
-#currentTransactions>p, #transactionHistory>p {
+#currentTransactions>p,
+#transactionHistory>p {
     text-align: center
 }
 
-#currentTransactions .table-overflow p, #transactionHistory .table-overflow p {
+#currentTransactions .table-overflow p,
+#transactionHistory .table-overflow p {
     display: none
 }
 
@@ -2046,50 +2206,41 @@ p.error {
         flex-wrap: wrap;
         justify-content: space-between
     }
-
     .flex-container>div {
         margin-right: 0;
         width: 49%
     }
-
     .flex-container>div.char-info {
         width: 100%
     }
-
     .flex-container>div:nth-child(odd) {
         margin-right: 2%
     }
-
-    .flex-container>div.buys, .flex-container>div.sells {
+    .flex-container>div.buys,
+    .flex-container>div.sells {
         width: 100%
     }
-
     .stats>.flex-container>div {
         width: 100%;
         margin-right: 0
     }
-
     .stats .stat-breakdown {
         max-width: none
     }
-
-    .stat-breakdown .flex-container>div, .stat-summary .flex-container>div {
+    .stat-breakdown .flex-container>div,
+    .stat-summary .flex-container>div {
         width: auto
     }
-
     .buys {
         margin-bottom: 20px
     }
-
     .char-details .details {
         width: 100%;
         position: static
     }
-
     .char-details .subtabs {
         margin-left: 0
     }
-
     #itemDetails:not(.skin):not(.trait) {
         top: 65px !important;
         left: 10px !important;
@@ -2098,19 +2249,15 @@ p.error {
         bottom: 10px;
         max-width: none
     }
-
     #itemDetails.above {
         z-index: 1
     }
-
     #itemDetails:not(.skin):not(.trait) .close {
         opacity: 1
     }
-
     #itemDetails:not(.skin):not(.trait) .link {
         display: block
     }
-
     #traitDetails {
         top: 65px !important;
         left: 10px !important;
@@ -2120,36 +2267,29 @@ p.error {
         max-width: none;
         overflow: auto
     }
-
     #traitDetails .close {
         opacity: 1
     }
-
     #traitDetails .details {
         max-width: 245px;
         width: auto
     }
-
     #traitDetails .recharge {
         width: auto;
         right: 25px
     }
-
     #characters .total-values {
         float: none;
         margin-top: 10px
     }
-
     #skillDetails {
         position: static;
         width: 100%;
         background: none
     }
-
     #skillDetails small {
         display: none
     }
-
     .skill-details {
         padding: 0;
         margin: 10px 0;
@@ -2157,7 +2297,6 @@ p.error {
         border-top: 1px solid #fff;
         padding-top: 10px
     }
-
     body>aside {
         position: fixed;
         overflow: auto;
@@ -2175,12 +2314,10 @@ p.error {
         opacity: 1;
         box-shadow: 0 15px 24px rgba(0, 0, 0, .22), 0 19px 76px rgba(0, 0, 0, .3)
     }
-
     body>aside.open {
         -webkit-transform: translateZ(0);
         transform: translateZ(0)
     }
-
     body>aside>nav>a {
         display: block;
         text-align: left;
@@ -2188,88 +2325,72 @@ p.error {
         color: #303030;
         padding: 10px 10px 8px 14px
     }
-
-    body>aside>nav>a.selected, body>aside>nav>a:hover {
+    body>aside>nav>a.selected,
+    body>aside>nav>a:hover {
         border-bottom: 2px solid transparent
     }
-
     body>aside>nav>a.selected {
         background: #eee;
         color: #33b5e5
     }
-
     body>aside>nav a i {
         margin-right: 6px
     }
-
     body>aside .of {
         display: none
     }
-
     body>aside h2 {
         text-align: left;
         padding: 45px 12px 10px;
-        background: #33b5e5 url(../img/menu-bg.jpg);
+        background: #33b5e5 url(assets/social/menu-bg.jpg);
         background-size: 100%;
         color: #000;
         border-bottom: 0
     }
-
     body>aside h2 a {
         display: block;
         color: #f8f8f8
     }
-
     body>aside h2 a:hover {
         color: #f8f8f8
     }
-
     #worldName {
         margin-left: 0
     }
-
     .standings>div {
         padding: 10px 0
     }
-
     .tier {
         margin-left: 5px
     }
-
-    #hideMenu, #showMenu {
+    #hideMenu,
+    #showMenu {
         display: block
     }
-
     #hideMenu {
         color: #f8f8f8
     }
-
     #showMenu {
         opacity: 0;
         z-index: -1
     }
-
     #showMenu.visible {
         opacity: 1;
         z-index: 1
     }
-
     .achievement-categories {
         text-align: left
     }
-
     .achievement-categories a {
         display: inline-block;
         position: absolute;
         right: 0;
         bottom: 0
     }
-
     .achievement-categories select {
         display: block;
         margin: 5px 10px 5px -4px
     }
-
     .build-skill:hover .skill-details {
         position: fixed;
         top: 30px;
@@ -2288,39 +2409,32 @@ p.error {
         display: block;
         max-width: 316px
     }
-
-    #pvp .games>div:nth-child(2n) .map-img, #pvp .map-img {
+    #pvp .games>div:nth-child(2n) .map-img,
+    #pvp .map-img {
         float: none;
         margin: 0 auto
     }
-
     .games div {
         text-align: center;
         margin: 0 auto
     }
-
     .games div.flex-container>div {
         text-align: left
     }
-
     .games div.flex-container>div.game-score {
         text-align: right
     }
-
     .games .flex-container {
         max-width: 316px
     }
-
     #pvp .games h4 {
         padding-top: 5px
     }
-
     #pvp .games h6 {
         text-align: left;
         max-width: 316px;
         margin: 0 auto 5px
     }
-
     #pvp .games h6 span {
         margin-right: 0
     }
@@ -2331,13 +2445,11 @@ p.error {
         text-align: left;
         width: 100%
     }
-
     .total-values i {
         position: absolute;
         top: 5px;
         right: 5px
     }
-
     .total-vendor:after {
         content: "\A";
         white-space: pre
@@ -2348,12 +2460,12 @@ p.error {
     body {
         padding-top: 52px
     }
-
     h1 {
         font-size: 26px
     }
-
-    #hideMenu, #showMenu, #showSettings {
+    #hideMenu,
+    #showMenu,
+    #showSettings {
         top: 10px
     }
 }
