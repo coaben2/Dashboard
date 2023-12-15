@@ -1,7 +1,7 @@
 function keyCheck(t) {
     if ("" != t && 72 == t.length) {
         var i = "https://api.guildwars2.com/v2/tokeninfo?access_token=" + t;
-        $("#loader").addClass("visible"), $("body").addClass("loading"), $("#keySubmit").addClass("shift").attr("disabled", "disabled"), error = !1, $("body > h2, body > aside").removeClass("visible"), $("section").removeClass("visible").removeClass("loading"), $("#mainNav a").removeClass("selected"), setTimeout(function() { $.ajax({ url: i, type: "GET", dataType: "json", cache: !0, timeout: 1e4, success: function(i) { i.id ? (key = t, $("#apiKey").val() != key && $("#apiKey").val(key), createCookie("apiKey", key, 365), getAccount(t)) : (createCookie("apiKey", "", -1), $("#apiKey").removeClass("success").addClass("error")) }, error: function() { createCookie("apiKey", "", -1), $("#apiKey").removeClass("success").addClass("error"), error = !0 } }) }, 400)
+        $("#loader").addClass("visible"), $("body").addClass("loading"), $("#keySubmit").addClass("shift").attr("disabled", "disabled"), error = !1, $("body > h2, body > aside").removeClass("visible"), $("section").removeClass("visible").removeClass("loading"), $("#mainNav a").removeClass("selected"), setTimeout(function () { $.ajax({ url: i, type: "GET", dataType: "json", cache: !0, timeout: 1e4, success: function (i) { i.id ? (key = t, $("#apiKey").val() != key && $("#apiKey").val(key), createCookie("apiKey", key, 365), getAccount(t)) : (createCookie("apiKey", "", -1), $("#apiKey").removeClass("success").addClass("error")) }, error: function () { createCookie("apiKey", "", -1), $("#apiKey").removeClass("success").addClass("error"), error = !0 } }) }, 400)
     }
 }
 
@@ -13,7 +13,7 @@ function getAccount(t) {
         dataType: "json",
         cache: !0,
         timeout: 1e4,
-        success: function(t) {
+        success: function (t) {
             if (t.name)
                 if ($("#showMenu").addClass("visible"), accountName = t.name, $("#accountName").html('<i class="material-icons">account_circle</i> ' + accountName), getWorld(t.world), guilds = t.guilds, "" != getCookie("startTab")) {
                     var i = getCookie("startTab");
@@ -21,9 +21,121 @@ function getAccount(t) {
                 } else $("#mainNav a[data-id]:first").trigger("click");
             else createCookie("apiKey", "", -1), $("#apiKey").removeClass("success").addClass("error")
         },
-        error: function() { error = !0 }
+        error: function () { error = !0 }
     })
 }
+
+function getBankItemDetails(t, i, s) {
+    var a = t.toString(),
+        e = "";
+    i && i.length && (e = i.toString());
+    $.ajax({
+        type: "GET",
+        url: "https://api.guildwars2.com/v2/items?lang=en&ids=" + a,
+        dataType: "json",
+        cache: !0,
+        timeout: 1e4,
+        success: function (t) {
+            $.each(t, function () {
+                var t = this.id;
+                $(".item[data-itemid='" + this.id + "'] img").attr("data-src", this.icon), $(".item[data-itemid='" + this.id + "'] .item-name").html(this.name), $(".item[data-itemid='" + this.id + "']").attr("data-name", this.name), $(".item[data-itemid='" + this.id + "']").attr("data-vendorprice", this.vendor_value), $(".item[data-upgrade1='" + this.id + "']").attr("data-upgrade1-vendor", this.vendor_value), $(".item[data-upgrade2='" + this.id + "']").attr("data-upgrade2-vendor", this.vendor_value), $(".item[data-itemid='" + this.id + "']").attr("data-origname", this.name), $(".item[data-itemid='" + this.id + "']").attr("data-description", this.description), $(".item[data-itemid='" + this.id + "']").attr("data-type", this.type), $(".item[data-itemid='" + this.id + "']").attr("data-level", this.level), $(".item[data-itemid='" + this.id + "']").attr("data-rarity", this.rarity), $(".item[data-itemid='" + this.id + "']").addClass(this.rarity), $(".item[data-itemid='" + this.id + "']").attr("data-icon", this.icon);
+                var i = '<img src="' + this.icon + '"> ' + this.name,
+                    s = '<img src="' + this.icon + '"> ' + this.name;
+                if (this.flags) {
+                    var a = "";
+                    $.each(this.flags, function () { a += this + "," }), $(".item[data-itemid='" + this.id + "']").attr("data-flags", a), $(".item[data-upgrade1='" + this.id + "']").attr("data-upgrade1-flags", a), $(".item[data-upgrade2='" + this.id + "']").attr("data-upgrade2-flags", a)
+                }
+                if (this.details) {
+                    if ($(".item[data-itemid='" + this.id + "']").attr("data-detailstype", this.details.type), $(".item[data-itemid='" + this.id + "']").attr("data-minpower", this.details.min_power), $(".item[data-itemid='" + this.id + "']").attr("data-maxpower", this.details.max_power), $(".item[data-itemid='" + this.id + "']").attr("data-defense", this.details.defense), this.details.infix_upgrade) {
+                        if (this.details.infix_upgrade.attributes) {
+                            var e = 1;
+                            $.each(this.details.infix_upgrade.attributes, function () { $(".item[data-itemid='" + t + "']").attr("data-stat" + e, "+" + this.modifier + " " + this.attribute), e++ })
+                        }
+                        this.details.infix_upgrade.buff && $(".item[data-itemid='" + t + "']").attr("data-buff", this.details.infix_upgrade.buff.description)
+                    }
+                    if (this.details.bonuses) {
+                        var e = 1;
+                        $.each(this.details.bonuses, function () { $(".item[data-itemid='" + t + "']").attr("data-bonus" + e, "(" + e + ") " + this), e++ })
+                    }
+                    $(".item[data-upgrade1='" + this.id + "']").attr("data-upgrade1-html", i), $(".item[data-upgrade2='" + this.id + "']").attr("data-upgrade2-html", i), $(".item[data-infusion1='" + this.id + "']").attr("data-infusion1-html", s), $(".item[data-infusion2='" + this.id + "']").attr("data-infusion2-html", s)
+                }
+            }), "" != e && $.ajax({ type: "GET", url: "https://api.guildwars2.com/v2/skins?lang=en&ids=" + e, dataType: "json", cache: !0, timeout: 1e4, success: function (t) { $.each(t, function () { $(".item[data-skin='" + this.id + "'] img").attr("data-src", this.icon), $(".item[data-skin='" + this.id + "'] .item-name").html(this.name), $(".item[data-skin='" + this.id + "']").attr("data-name", this.name) }) }, error: function () { } }), s && s()
+        },
+        error: function () { }
+    })
+}
+
+function getItemDetails(t) {
+    var i = t.toString();
+    $.ajax({
+        type: "GET",
+        url: "https://api.guildwars2.com/v2/items?lang=en&ids=" + i,
+        dataType: "json",
+        cache: !0,
+        timeout: 1e4,
+        success: function (t) {
+            $.each(t, function () {
+                var t = $("#itemLinks").val();
+                $("tr[data-itemid='" + this.id + "'] .icon img").attr("data-src", this.icon), $("tr[data-itemid='" + this.id + "'] .item-name").addClass(this.rarity).html('<a href="' + t + this.id + '" target="_blank">' + this.name + "</a>")
+            })
+        },
+        error: function () { }
+    })
+}
+
+function handlePage(t, i, s) {
+    $.ajax({
+        type: "GET",
+        url: t,
+        dataType: "json",
+        cache: !1,
+        timeout: 1e4,
+        success: function (t, a, e) {
+            if (!t.text) {
+                var n = [],
+                    r = 0;
+                $.each(t, function () {
+                    var t = "t-" + this.id,
+                        a = '<tr id="' + t + '" data-itemid="' + this.item_id + '"><td class="icon"><img src="assets/img/gw2-logo.png"></td><td class="item-name">' + this.item_id + "</td><td>" + this.quantity + "</td><td>" + priceFormat(this.price) + "</td><td>" + timeSince(this.created) + "</td><td>" + timeSince(this.purchased) + "</td></tr>";
+                    $("#" + i + " ." + s + " tbody").append(a), -1 == $.inArray(this.item_id, n) && n.push(this.item_id), r++
+                });
+                var o = 38 * r + 25;
+                $("#" + i + " ." + s + " .table-overflow").css("min-height", o + "px"), getItemDetails(n)
+            }
+        },
+        error: function () { }
+    })
+}
+
+function lazyLoad() {
+    var t = $("section.visible, section.loading").attr("id"),
+        i = $("#" + t),
+        s = "#" + t;
+    if ("characters" == t) {
+        var a = i.find(".char-details > div.visible > .subtabs"),
+            e = a.find("nav a.selected").attr("data-class"),
+            n = a.children("." + e);
+        s += " #" + i.find(".char-details > div.visible").attr("id")
+    } else var a = i.find(".subtabs"),
+        e = a.find("nav a.selected").attr("data-class"),
+        n = i.find(".subtabs > div.visible");
+    if (a.length)
+        if (n.find(".subtabs").length) {
+            var r = n.find(".subtabs"),
+                o = (r.find(".subtabs > div.visible"), r.find("nav a.selected").attr("data-class"));
+            s += " ." + e + " ." + o
+        } else s += " ." + e;
+    var d = $(window).scrollTop(),
+        c = $(window).height(),
+        l = d + c;
+    $(s).each(function () {
+        $(this).find("img[data-src]").each(function () {
+            var t = $(this);
+            t.offset().top < l + 20 && t.attr("src", t.attr("data-src")).removeAttr("data-src")
+        })
+    })
+}
+
 // liste des items stackable par 250
 function displayStackedItems() {
     $.ajax({
@@ -87,3 +199,6 @@ function displayStackedItems() {
 $(document).ready(function () {
     displayStackedItems();
 });
+$(window).scroll(function () { lazyLoad() });
+var groupsJSON, categoriesJSON, accountAchievementsJSON, achievementsArray = [];
+$("body").on("change", "#achievementGroups", function () { getAchievementGroupCategories($(this).val()) }), $("body").on("change", "#achievementCategories", function () { getCategoryAchievements($(this).val()) }), $("body").on("click", ".jq-collapse-achievements", function () { return $(this).toggleClass("collapsed"), $(".achievement-container").toggleClass("collapsed"), !1 });
