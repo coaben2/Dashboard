@@ -71,6 +71,9 @@ header {
   
   
   body {
+    background-image: url('assets/image/Fond-global.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     min-height: 100vh;

@@ -138,16 +138,19 @@ html {
 }
 
 body {
+    background-image: url('assets/image/Fond-global.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
     line-height: 100%;
     font-family: Roboto, sans-serif;
     font-size: 14px;
-    background: #f9f9f9 url(assets/social/handmadepaper.png);
     min-width: 320px;
     margin: 0 auto;
     padding: 60px 20px 30px;
     position: relative;
     min-height: 100%;
-    color: #303030;
+    color: #000000;
 }
 
 body>div {
