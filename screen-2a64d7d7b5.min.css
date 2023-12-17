@@ -141,7 +141,6 @@ body {
     background-image: url('assets/image/Fond-global.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-
     line-height: 100%;
     font-family: Roboto, sans-serif;
     font-size: 14px;
@@ -150,7 +149,7 @@ body {
     padding: 60px 20px 30px;
     position: relative;
     min-height: 100%;
-    color: #000000;
+    color: #000;
 }
 
 body>div {
@@ -262,7 +261,7 @@ header {
 
 a {
     text-decoration: none;
-    color: #33b5e5;
+    color: #000;
     transition: all .2s ease-out;
 }
 
@@ -862,7 +861,7 @@ td span {
     background: none;
     cursor: pointer;
     outline: none;
-    color: #33b5e5;
+    color: #000;
     margin-left: -4px;
     height: 29px
 }
@@ -934,7 +933,7 @@ td span {
 .subtabs nav a.selected,
 .subtabs nav a:hover {
     text-decoration: none;
-    color: #09c;
+    color: #000;
     border-bottom: 2px solid #09c
 }
 
