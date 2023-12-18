@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <title>Accueil</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
   <header>
     <nav>
@@ -24,7 +22,6 @@
       <button onclick="loadContent('GW2-sac.html')">vide ton sac</button>
     </div>
   </aside>
-
   <main>
     <iframe id="content-frame" src="GW2-lexique.html"></iframe>
   </main>
@@ -40,13 +37,10 @@
     </ul>
   </footer>
 </body>
-
 <script>
-
   function loadContent(contentUrl) {
     const iframe = document.getElementById('content-frame');
     iframe.src = contentUrl;
   }
 </script>
-
 </html>
